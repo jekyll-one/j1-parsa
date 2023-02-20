@@ -1,0 +1,26 @@
+//
+// Anchors
+//
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a,
+button,
+select {
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+a:focus,
+button:focus,
+select:focus {
+  outline: 0;
+}
+
+a:hover, a.text-dark:hover {
+  color: #ff6f00 !important;
+}

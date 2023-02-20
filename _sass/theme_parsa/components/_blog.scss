@@ -1,0 +1,17 @@
+//
+// Blog
+//
+
+.tag-list {
+  li {
+    a {
+      display: block;
+      background: #f4f4f4;
+      padding: 2px 5px;
+      color: #000000;
+      &:hover {
+        color:#ff6f00;
+      }
+    }
+  }
+}

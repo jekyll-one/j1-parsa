@@ -1,0 +1,34 @@
+//
+// Headeoom
+//
+
+.headroom {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .4s ease-in-out;
+  padding: 10px 40px;
+  background-color: #fff;
+}
+
+@media (max-width: 575px) {
+  .headroom {
+    padding: 10px;
+  }
+}
+
+.headroom--unpinned {
+  top: -150px;
+}
+
+@media (max-width: 991px) {
+  .headroom--unpinned {
+    top: 0;
+  }
+}
+
+.headroom--pinned {
+  top: 0;
+}

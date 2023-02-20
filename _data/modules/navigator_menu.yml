@@ -1,0 +1,63 @@
+# ------------------------------------------------------------------------------
+# ~/_data/modules/j1_navigator_menu.yml (run-time)
+# Configuration of the J1 NAV Module for the main navigation bar
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2023 Juergen Adams
+#
+# J1 Theme is licensed under the MIT License.
+# See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
+#
+# ------------------------------------------------------------------------------
+# NOTE:
+#   For general navigation settings, see navigator.yml
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# TOP-LEVEL items (NO sub-menu)
+#
+
+- item:                                 PORTFOLIO
+  href:                                 /#portfolio
+
+- item:                                 FEATURED
+  href:                                 /#featured-posts
+
+- item:                                 ALL POSTS
+  href:                                 /#all-posts
+
+- item:                                 CONTACT
+  href:                                 /contact/
+
+- item:                                 THEME
+  href:                                 /pages/public/previewer/theme/
+  
+- item:                                 ABOUT
+  href:                                 /about/
+
+# ------------------------------------------------------------------------------
+# MENU-LEVEL items (sub-menu)
+#
+
+# ------------------------------------------------------------------------------
+# Menu Blog Navigator
+#
+# - item:                                 BLOG
+#   sublevel:
+#     - title:                            Blog Navigator
+#       href:                             /pages/public/blog/navigator/
+#       icon:                             near-me
+#     - title:                            Categories
+#       href:                             /pages/public/blog/navigator/archive/categoryview/
+#       icon:                             pin
+#     - title:                            Date
+#       href:                             /pages/public/blog/navigator/archive/dateview/
+#       icon:                             calendar
+#     - title:                            Archive
+#       href:                             /pages/public/blog/navigator/archive/allview/
+#       icon:                             archive
+
+# ------------------------------------------------------------------------------
+# END config

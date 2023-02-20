@@ -1,0 +1,64 @@
+/*
+  # ----------------------------------------------------------------------------
+  # ~/_sass/theme_parsa.scss
+  # Theme AGENCY - Definitions AND partial index file|s
+  #
+  # Product/Info:
+  # https:#jekyll.one
+  # https://github.com/StartBootstrap/startbootstrap-agency
+  #
+  # Copyright (C) 2023 Juergen Adams
+  # Copyright (C) 2016 Present, Themefisher
+  #
+  # J1 Theme is licensed under the MIT License.
+  # See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
+  # Theme Parsa is licensed under the MIT License.
+  # See: https://github.com/themefisher/parsa-jekyll/blob/main/LICENSE
+  # ----------------------------------------------------------------------------
+  # NOTE:
+  # jadams, 2023-01-18: disabled (comment) all partials NOT needed for
+  #         the use with J1 Template
+  #
+  # ----------------------------------------------------------------------------
+*/
+
+$theme: "Parsa" !default;
+
+// BS|Theme BASE goes here
+// =============================================================================
+
+// Variables
+// -----------------------------------------------------------------------------
+@import "./theme_parsa/variables";
+
+// BS source
+// -----------------------------------------------------------------------------
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// BS|Theme overrides goes here
+// =============================================================================
+@import "./theme_parsa/styles.scss";
+@import "./theme_parsa/colors";
+
+// Theme CSS globals
+// -----------------------------------------------------------------------------
+// @import "./theme_parsa/global.scss";
+
+// Components
+// -----------------------------------------------------------------------------
+@import "./theme_parsa/components/anchors.scss";
+@import "./theme_parsa/components/blog.scss";
+@import "./theme_parsa/components/buttons.scss";
+@import "./theme_parsa/components/forms.scss";
+@import "./theme_parsa/components/headroom.scss";
+@import "./theme_parsa/components/instagram.scss";
+@import "./theme_parsa/components/navbar.scss";
+@import "./theme_parsa/components/overlay.scss";
+@import "./theme_parsa/components/preloader.scss";
+@import "./theme_parsa/components/slick.scss";
+
+// Theme CSS sections
+// -----------------------------------------------------------------------------
+// @import "./theme_parsa/sections/footer.scss";
+@import "./theme_parsa/sections/masthead.scss";
+@import "./theme_parsa/sections/portfolio.scss";

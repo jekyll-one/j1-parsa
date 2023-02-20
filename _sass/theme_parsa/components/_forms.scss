@@ -1,0 +1,19 @@
+//
+// Forms
+//
+
+.form-control {
+  border: 0;
+  border-bottom: 1px solid #ababab;
+  border-radius: 0;
+}
+
+.form-control:focus {
+  outline: 0;
+  box-shadow: none;
+  border-color: #ff6f00;
+}
+
+textarea.form-control {
+  height: 150px;
+}

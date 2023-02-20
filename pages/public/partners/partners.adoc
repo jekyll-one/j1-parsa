@@ -1,0 +1,68 @@
+---
+layout:                                 page
+
+title:                                  Partners
+tagline:                                WE WORK WITH
+date:                                   2023-01-03 09:33:20 +0000
+description: >
+                                        Agency is one of the most popular HTML themes offered by Start Bootstrap.
+                                        I have Jekyllised this theme to give web developers and hobbyists a simple
+                                        and clean implimentation in Jekyll for starting new projects. This template
+                                        is free and open source, released under the MIT license.
+keywords: >
+                                        Bootstrap, Jekyll, JekyllOne, Agency, Theme, Template, Ruby, Gem
+
+
+categories:                             [ Partners ]
+tags:                                   [ Microsoft, Google, Facebook, IBM ]
+
+image:
+  path:                                 /assets/images/agency/img/header-bg.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Bootstrap Theme Agency
+
+fab_menu_id:                            open_toc
+comments:                               false
+permalink:                              /partners/
+regenerate:                             false
+
+resources:                              [ animate ]
+resource_options:
+  - attic:
+      padding_top:                      600
+      padding_bottom:                   50
+#     opacity:                          0.5
+      slides:
+        - url:                          /assets/images/agency/img/header-bg.jpg
+          alt:                          Bootstrap Theme Agency
+---
+
+lorem:sentences[10]
+
+lorem:sentences[3]
+
+
+== Microsoft
+
+lorem:sentences[5]
+
+lorem:sentences[3]
+
+== Google
+
+lorem:sentences[5]
+
+lorem:sentences[2]
+
+== Facebook
+
+lorem:sentences[5]
+
+lorem:sentences[3]
+
+== IBM
+
+lorem:sentences[5]
+
+lorem:sentences[3]

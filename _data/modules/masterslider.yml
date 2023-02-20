@@ -1,0 +1,165 @@
+# ------------------------------------------------------------------------------
+# ~/_data/modules/masterslider.yml
+# User configuration for J1 MasterSlider
+#
+# Product/Info:
+# https://jekyll.one
+#
+# Copyright (C) 2023 Juergen Adams
+#
+# J1 Theme is licensed under the MIT License.
+# See: https://github.com/jekyll-one-org/j1-template/blob/main/LICENSE.md
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# Description
+#
+description:
+  title:                                J1 MasterSlider
+  scope:                                User settings
+  location:                             _data/modules/masterslider.yml
+
+# ------------------------------------------------------------------------------
+# User settings
+#
+settings:
+
+  # ----------------------------------------------------------------------------
+  # Slider options
+  # ----------------------------------------------------------------------------
+  skin:                                 default
+
+  # ----------------------------------------------------------------------------
+  # Slider settings
+  # ----------------------------------------------------------------------------
+  sliders:
+
+    # --------------------------------------------------------------------------
+    # AGENCY partners
+    #
+    - slider:
+      enabled:                          true
+
+      id:                               ms_ageny_partners
+      skin:                             default
+
+      # ------------------------------------------------------------------------
+      # Slider controls
+      #
+      controls:
+
+        slideinfo:
+          enabled:                      true
+
+      # ------------------------------------------------------------------------
+      # Slider options
+      #
+      options:
+#       width:                          1200
+#       height:                         600
+        autoHeight:                     true
+        autoplay:                       true
+        pauseOnHover:                   true
+        fillMode:                       center
+        filters:
+          opacity:                      1.0
+
+      # ------------------------------------------------------------------------
+      # Slides
+      #
+      slides:
+
+        # slide 1 (Facebook)
+        #
+        - slide:
+          alt:                          Facebook
+          title:                        Facebook
+          foreground_image:             /assets/images/agency/img/partners/scalable/facebook.svg
+          background_image:             /assets/themes/j1/modules/masterslider/css/blank.gif
+          thumb_image:                  false
+          slideinfo:
+            rtext:                      400                                     # false or [100 .. 500]
+            boxed:                      false
+#           title:                      Facebook
+#           title_color:                '#ffc800'
+#           title_animated:             false
+#           title_upcase:               true
+#           tagline:
+#           tagline_color:              '#616161'                               # md-gray-700
+#           tagline_animated:           false
+#           tagline_upcase:             false
+            description:                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+            description_color:          '#616161'                               # md-gray-700
+            description_animated:       fadeInLeft
+
+        # slide 2 (Google)
+        #
+        - slide:
+          alt:                          Google
+          title:                        Google
+          foreground_image:             /assets/images/agency/img/partners/scalable/google.svg
+          background_image:             /assets/themes/j1/modules/masterslider/css/blank.gif
+          thumb_image:                  false
+          slideinfo:
+            rtext:                      400                                     # false or [100 .. 500]
+            boxed:                      false
+#           title:                      Google
+#           title_color:                '#ffc800'
+#           title_animated:             false
+#           title_upcase:               true
+#           tagline:
+#           tagline_color:              '#0D47A1'
+#           tagline_animated:           false
+#           tagline_upcase:             true
+            description:                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+            description_color:          '#616161'                               # md-gray-700
+            description_animated:       fadeInLeft
+
+        # slide 3 (IBM)
+        #
+        - slide:
+          alt:                          IBM
+          title:                        IBM
+          foreground_image:             /assets/images/agency/img/partners/scalable/ibm.svg
+          background_image:             /assets/themes/j1/modules/masterslider/css/blank.gif
+          thumb_image:                  false
+          slideinfo:
+            rtext:                      400                                     # false or [100 .. 500]
+            boxed:                      false
+#           title:                      IBM
+#           title_color:                '#ffc800'
+#           title_animated:             false
+#           title_upcase:               true
+#           tagline:
+#           tagline_color:              '#0D47A1'
+#           tagline_animated:           false
+#           tagline_upcase:             true
+            description:                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+            description_color:          '#616161'                               # md-gray-700
+            description_animated:       fadeInLeft
+
+        # slide 4 (Microsoft)
+        #
+        - slide:
+          alt:                          Microsoft
+          title:                        Microsoft
+          foreground_image:             /assets/images/agency/img/partners/scalable/microsoft.svg
+          background_image:             /assets/themes/j1/modules/masterslider/css/blank.gif
+          thumb_image:                  false
+          slideinfo:
+            rtext:                      400                                     # false or [100 .. 500]
+            boxed:                      false
+#           title:                      Microsoft
+#           title_color:                '#ffc800'
+#           title_animated:             false
+#           title_upcase:               true
+#           tagline:
+#           tagline_color:              '#0D47A1'
+#           tagline_animated:           false
+#           tagline_upcase:             true
+            description:                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+            description_color:          '#616161'                               # md-gray-700
+            description_animated:       fadeInLeft
+
+# ------------------------------------------------------------------------------
+# END config

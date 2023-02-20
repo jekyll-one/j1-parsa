@@ -1,0 +1,52 @@
+//
+// Slick
+//
+
+
+.instagram-post {
+  position: relative;
+}
+
+.instagram-post::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s ease;
+}
+
+.instagram-post ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s ease;
+}
+
+.instagram-post ul a {
+  transition: .2s ease;
+  font-size: 20px;
+}
+
+.instagram-post ul a:hover {
+  color: #ff6f00 !important;
+}
+
+.instagram-post:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.instagram-post:hover ul {
+  visibility: visible;
+  opacity: 1;
+}

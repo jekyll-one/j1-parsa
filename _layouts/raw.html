@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head section -->
+{% include custom/parsa/templates/head.html %}
+
+<body>
+
+  {% if site.preloader == true %}
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- /Preloader -->
+  {% endif %}
+
+  <!-- Dividers -->
+  <div class="dividers">
+    <div class="divider"></div>
+    <div class="divider"></div>
+    <div class="divider"></div>
+    <div class="divider"></div>
+  </div>
+  <!-- /Dividers -->
+
+  <!-- Navigation bar -->
+  {% include custom/parsa/templates/navigation.html %}
+
+  {{ content }}
+
+  <!-- JS needed for the template -->
+
+  <!-- jQuery -->
+  <script src="{{ site.baseurl }}/assets/plugins/jQuery/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="{{ site.baseurl }}/assets/plugins/bootstrap/bootstrap.min.js"></script>
+
+  <!-- Slick slider -->
+  <script src="{{ site.baseurl }}/assets/plugins/slick/slick.min.js"></script>
+
+  <!-- Masonry -->
+  <script src="{{ site.baseurl }}/assets/plugins/masonry/masonry.js"></script>
+
+  <!-- Instafeed -->
+  <script src="{{ site.baseurl }}/assets/plugins/instafeed/instafeed.min.js"></script>
+
+  <!-- Headroom -->
+  <script src="{{ site.baseurl }}/assets/plugins/headroom/headroom.js"></script>
+
+  <!-- Reading time -->
+  <script src="{{ site.baseurl }}/assets/plugins/reading-time/readingTime.min.js"></script>
+
+  <!-- Lunr -->
+  <script src="{{ site.baseurl }}/assets/plugins/search/lunr.min.js"></script>
+
+  <!-- Search -->
+  <script src="{{ site.baseurl }}/assets/plugins/search/search.js"></script>
+
+  <!-- Main JS -->
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+
+</body>
+
+</html>
