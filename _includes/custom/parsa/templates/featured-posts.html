@@ -25,9 +25,9 @@
               {% assign categories = page.categories %}
               {% endif %}
               {% for category in post.categories %}
-              <a class="d-block text-white text-uppercase link-no-decoration pb-3 " href="{{ 'category/' | relative_url }}{{ category | slugify }}">{{ category }}</a>
+              <a class="d-block text-white text-uppercase link-no-decoration pb-5" href="{{ 'category/' | relative_url }}{{ category | slugify }}">{{ category }}</a>
               {% endfor %}
-              <h4 class="card-title mb-4">
+              <h4 class="card-title mb-5">
                 <a class="text-white link-no-decoration" href="{{ post.url | relative_url }}">{{post.title}}</a>
               </h4>
               <a class="btn btn-outline-light" href="{{ post.url | relative_url }}">read &nbsp;&nbsp;&middot;&nbsp;{{post.tagline}}</a>
