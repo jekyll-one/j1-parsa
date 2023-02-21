@@ -229,7 +229,7 @@ doctype:                                html
 title:                                  Parsa | Jekyll Portfolio Template
 tagline:                                Welcome
 description: >
-                                        I’m a Freelance Interactive Art Director based in France.
+                                        I’m a Freelance Art Director based in France.
                                         Focusing across branding and identity, digital and print.
 keywords: >
                                         opensource, free, load, download, start, starter, example,
@@ -906,7 +906,7 @@ featured-post-slider:                   true
 #
 hero:
   hero-subtitle: >
-                                        I’m a Freelance Interactive Art Director based in France.
+                                        I’m a Freelance Art Director based in France.
                                         Focusing across branding and identity, digital and print.
   # Add your banner image
   hero-banner:                          /assets/images/parsa/masthead/banner-img.png

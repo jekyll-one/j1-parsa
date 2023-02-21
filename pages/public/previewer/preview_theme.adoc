@@ -6,7 +6,7 @@ description: >
                                         Parsa is a popular HTML theme offered by ThemeFisher.
                                         I have Jekyllised this theme to give web developers and
                                         hobbyists a simple and clean implimentation in Jekyll
-                                        for starting new sites.
+                                        for starting a new blog site.
                                         <br/><br/>
                                         This template is <b>free and open source</b>, released
                                         under the MIT license.
@@ -15,16 +15,13 @@ categories:                             [ Previewer ]
 tags:                                   [ Bootstrap, CSS, Theme, Parsa ]
 
 comments:                               false
-fab_menu_id:                            page_ctrl                               # open_toc
+fab_menu_id:                            default
 scrollbar:                              false
 
 permalink:                              /pages/public/previewer/theme/
 regenerate:                             false
 
-resources:                              [ animate, clipboard, rouge, toccer ]
-resource_options:
-  - toccer:
-      collapseDepth:                    3
+resources:                              [ animate, clipboard, rouge ]
 ---
 
 // Page Initializer

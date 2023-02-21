@@ -229,7 +229,7 @@ doctype:                                html
 title:                                  Parsa | Jekyll Portfolio Template
 tagline:                                Welcome
 description: >
-                                        I’m a Freelance Interactive Art Director based in France.
+                                        I’m a Freelance Art Director based in France.
                                         Focusing across branding and identity, digital and print.
 keywords: >
                                         opensource, free, load, download, start, starter, example,
@@ -714,18 +714,10 @@ defaults:
         index:                          true
         follow:                         true
 
-      toc:                              true
-      fab_menu_id:                      page_ctrl
+      fab_menu_id:                      default
       scrollbar:                        false
       personalization:                  false
       exclude_from_search:              false
-
-      youtube:                          true
-      vimeo:                            true
-
-      resource_options:
-        - toccer:
-            collapseDepth:              3
 
   # ----------------------------------------------------------------------------
   # POSTS
@@ -740,7 +732,6 @@ defaults:
 
     values:
       layout:                           post
-      compress:                         true
 
       author:
         name:                           Juergen Adams
@@ -750,17 +741,11 @@ defaults:
         index:                          true
         follow:                         true
 
-      toc:                              true
-      fab_menu_id:                      open_toc_reload
+      fab_menu_id:                      default
       scrollbar:                        false
       page_navigation:                  true
       personalization:                  false
       exclude_from_search:              false
-      series:                           false
-
-      resource_options:
-        - toccer:
-            collapseDepth:              3
 
 
 # ==============================================================================
@@ -906,7 +891,7 @@ featured-post-slider:                   true
 #
 hero:
   hero-subtitle: >
-                                        I’m a Freelance Interactive Art Director based in France.
+                                        I’m a Freelance Art Director based in France.
                                         Focusing across branding and identity, digital and print.
   # Add your banner image
   hero-banner:                          /assets/images/parsa/masthead/banner-img.png
