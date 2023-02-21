@@ -255,10 +255,6 @@ author:
   name:                                 Juergen Adams
   email:                                juergen@jekyll.one
   url:                                  https://jekyll.one/
-  github:                               username
-  facebook:                             username
-  twitter:                              username
-# feedburner:                           feedname
 
 webmaster:
   email:                                webmaster@parsa.jekyll.one
@@ -285,14 +281,6 @@ brand:
 favicon:
   image:                                icons/parsa/favicon.ico
   type:                                 image/ico
-
-# Social links
-#
-social:
-  - { icon: "mdi mdi-github",   link: "https://github.com/jekyll-one/jekyll-parsa" }
-  - { icon: "mdi mdi-facebook", link: "https://www.facebook.com/" }
-  - { icon: "mdi mdi-twitter",  link: "https://twitter.com/home" }
-  - { icon: "mdi mdi-linkedin", link: "https://www.linkedin.com/" }
 
 # Preloader
 # To disable preloader change value to false
@@ -573,9 +561,6 @@ author:
   twitter:
   feedburner:
 
-
-logo:                                   /assets/images/icons/j1/j1-512x512.png
-
 image:
   path:                                 /assets/images/promo/home/screenshot.jpg
   width:                                1200
@@ -602,13 +587,12 @@ webmaster_verifications:
 # 6. PAGE configuration
 #
 # ------------------------------------------------------------------------------
-#
+
 # ------------------------------------------------------------------------------
 # EXCERPT settings
 #
 excerpt_separator:                      excerpt__end
 excerpt_truncate_words:                 100
-
 
 # ------------------------------------------------------------------------------
 # Paginator V1 configuration
@@ -638,7 +622,6 @@ jekyll-archives:
 # tag_page_layout:                        tag_page
 # tag_permalink_style:                    pretty
 
-
 # ------------------------------------------------------------------------------
 # COLLECTION settings
 # See: https://jekyllrb.com/docs/collections/#collections
@@ -653,6 +636,27 @@ collections:
 
   team:
     output: true
+
+#-------------------------------------------------------------------------------
+# Footer settings
+#
+logo:                                   /assets/images/icons/parsa/scalable/logo.svg
+
+contact:
+  email:                                example@ymail.com
+  phone:                                +90 000 333 22
+  address:
+    city:                               Sydney
+    street:                             6 rip carl Avenue CA 90733
+
+# Social links
+#
+social:
+  - { icon: "mdi mdi-github",   link: "https://github.com/jekyll-one/jekyll-parsa" }
+  - { icon: "mdi mdi-facebook", link: "https://www.facebook.com/" }
+  - { icon: "mdi mdi-twitter",  link: "https://twitter.com/home" }
+  - { icon: "mdi mdi-linkedin", link: "https://www.linkedin.com/" }
+
 
 # ------------------------------------------------------------------------------
 # FRONTMATTER defaults

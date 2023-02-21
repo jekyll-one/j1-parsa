@@ -7,7 +7,9 @@
 
         {% if site.logo %}
         <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-          <a href="{{site.baseurl}}/"><img src="{{site.logo | relative_url}}" alt="{{site.title}}" class="img-fluid"></a>
+          <a href="{{site.baseurl}}/" class="link-no-decoration">
+            <img src="{{site.logo | relative_url}}" alt="{{site.title}}" class="img-fluid">
+          </a>
         </div>
         {% endif %}
 
@@ -37,7 +39,7 @@
           <ul class="list-inline d-inline-block">
             {% for social in site.social %}
             <li class="list-inline-item">
-              <a href="{{ social.link }}" class="text-dark" target="blank" rel="noopener" alt="Social Media" aria-label="Social Media">
+              <a href="{{ social.link }}" class="text-dark link-no-decoration" target="blank" rel="noopener" alt="Social Media" aria-label="Social Media">
                 <i class="{{ social.icon }}"></i>
               </a>
             </li>

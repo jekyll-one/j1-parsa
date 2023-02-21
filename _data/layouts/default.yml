@@ -184,15 +184,27 @@ lanes:
       class:                            container-fluid no-padding
 
   # ----------------------------------------------------------------------------
-  # FOOTER container
+  # FOOTER container (J1)
   # The page footer displayed on all pages
   #
   - lane:
-      enabled:                          true
+      enabled:                          false
       id:                               j1_footer
       region:                           body-footer
       type:                             async
       class:
+
+  # ----------------------------------------------------------------------------
+  # PARSA footer
+  #
+  - lane:
+      enabled:                          true
+      id:                               parsa_footer
+      region:                           body-footer
+      type:                             sync
+      base:                             _includes/custom/parsa
+      path:                             templates
+      file:                             footer.html
 
   # ----------------------------------------------------------------------------
   # MODULE container
