@@ -53,7 +53,7 @@ environment:                            production
 # ------------------------------------------------------------------------------
 # Sets the build version of the site
 #
-version:                                2023.0.17
+version:                                2023.1.0
 
 # copyright
 # ------------------------------------------------------------------------------
@@ -255,13 +255,9 @@ author:
   name:                                 Juergen Adams
   email:                                juergen@jekyll.one
   url:                                  https://jekyll.one/
-  github:                               username
-  facebook:                             username
-  twitter:                              username
-# feedburner:                           feedname
 
 webmaster:
-  email:                                webmaster@agency.jekyll.one
+  email:                                webmaster@parsa.jekyll.one
 
 # Crawling/Indexing ENABLED for default. Settings managed page-wise using
 # frontmatter defaults or by page default settings to make sure that only
@@ -285,6 +281,12 @@ brand:
 favicon:
   image:                                icons/parsa/favicon.ico
   type:                                 image/ico
+
+# Preloader
+# To disable preloader change value to false
+# ------------------------------------------------------------------------------
+#
+preloader:                              true
 
 
 # ==============================================================================
@@ -344,8 +346,8 @@ permalink:                              pretty
 # site.url will be set to the value of host, port.
 # NOTE: Required setting for the sitemap plugin, for example.
 #
-# url:                                  http://localhost:25000
-url:                                    https://parsa.jekyll.one
+# url:                                http://localhost:25000
+url:                                  https://parsa.jekyll.one
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the
@@ -453,7 +455,7 @@ sass:
 #
 webrick:
   headers:
-    X-Builder-Template:                 J1 Theme
+    X-Builder-Template:                 J1 Parsa
     X-Builder-Engine:                   Jekyll
 
 # ------------------------------------------------------------------------------
@@ -499,7 +501,9 @@ plugins:
 # - jekyll-gist
 # - jekyll-redirect-from
   - asciidoctor
+  - jekyll-archives
   - jekyll-asciidoc
+  - jekyll-paginate
 
 # ------------------------------------------------------------------------------
 # ALGOLIA Search (Instantsearch)
@@ -544,7 +548,7 @@ whitelist:
 
 
 # ==============================================================================
-# 5. SEO ans Social Media settings (gloal)
+# 5. SEO and Social Media settings (gloal)
 #
 # ------------------------------------------------------------------------------
 #
@@ -556,9 +560,6 @@ author:
   facebook:
   twitter:
   feedburner:
-
-
-logo:                                   /assets/images/icons/j1/j1-512x512.png
 
 image:
   path:                                 /assets/images/promo/home/screenshot.jpg
@@ -586,12 +587,40 @@ webmaster_verifications:
 # 6. PAGE configuration
 #
 # ------------------------------------------------------------------------------
-#
+
 # ------------------------------------------------------------------------------
 # EXCERPT settings
 #
 excerpt_separator:                      excerpt__end
 excerpt_truncate_words:                 100
+
+# ------------------------------------------------------------------------------
+# Paginator V1 configuration
+#
+paginate:                               6
+paginate_path:                          /page/:num
+
+# Pages Path
+#
+defaults:
+  - scope:
+      path:                             pages
+    values:
+      permalink:                        /:basename:output_ext
+
+# Categories
+#
+jekyll-archives:
+  enabled:                              all
+  layout:                               category
+  permalinks:
+    category:                           /category/:name/
+
+# Tags
+#
+# tag_page_dir:                           tag
+# tag_page_layout:                        tag_page
+# tag_permalink_style:                    pretty
 
 # ------------------------------------------------------------------------------
 # COLLECTION settings
@@ -607,6 +636,27 @@ collections:
 
   team:
     output: true
+
+#-------------------------------------------------------------------------------
+# Footer settings
+#
+logo:                                   /assets/images/icons/parsa/scalable/logo.svg
+
+contact:
+  email:                                example@ymail.com
+  phone:                                +90 000 333 22
+  address:
+    city:                               Sydney
+    street:                             6 rip carl Avenue CA 90733
+
+# Social links
+#
+social:
+  - { icon: "mdi mdi-github",   link: "https://github.com/jekyll-one/jekyll-parsa" }
+  - { icon: "mdi mdi-facebook", link: "https://www.facebook.com/" }
+  - { icon: "mdi mdi-twitter",  link: "https://twitter.com/home" }
+  - { icon: "mdi mdi-linkedin", link: "https://www.linkedin.com/" }
+
 
 # ------------------------------------------------------------------------------
 # FRONTMATTER defaults
@@ -656,13 +706,6 @@ defaults:
         name:                           Juergen Adams
         url:                            https://jekyll.one/
 
-      logo:                             /assets/images/icons/j1/j1-512x512.png
-      image:
-        path:                           /assets/images/promo/home/screenshot.jpg
-        width:                          1200
-        height:                         800
-        alt:                            J1 Theme Home
-
       icons:
         family:                         MDI
         color:                          md-blue
@@ -675,18 +718,10 @@ defaults:
         index:                          true
         follow:                         true
 
-      toc:                              true
-      fab_menu_id:                      page_ctrl
+      fab_menu_id:                      default
       scrollbar:                        false
       personalization:                  false
       exclude_from_search:              false
-
-      youtube:                          true
-      vimeo:                            true
-
-      resource_options:
-        - toccer:
-            collapseDepth:              3
 
   # ----------------------------------------------------------------------------
   # POSTS
@@ -701,34 +736,20 @@ defaults:
 
     values:
       layout:                           post
-      compress:                         true
 
       author:
         name:                           Juergen Adams
         url:                            https://jekyll.one/
 
-      logo:                             /assets/images/icons/j1/j1-512x512.png
-      image:
-        path:                           /assets/images/promo/home/screenshot.jpg
-        width:                          1200
-        height:                         800
-        alt:                            J1 Theme Home
-
       robots:
         index:                          true
         follow:                         true
 
-      toc:                              true
-      fab_menu_id:                      open_toc_reload
+      fab_menu_id:                      default
       scrollbar:                        false
       page_navigation:                  true
       personalization:                  false
       exclude_from_search:              false
-      series:                           false
-
-      resource_options:
-        - toccer:
-            collapseDepth:              3
 
 
 # ==============================================================================
@@ -858,6 +879,28 @@ defaults:
 #   default:                            empty array
 #
 # ------------------------------------------------------------------------------
+#
+# Homepage layout ( two layout is available, you can set the another
+# layout by change the value of layout_home_page "true" to "false")
+#
+layout_home_page:                       true
+
+# You can enable or disable the featured-post-slider using true or
+# false values.
+#
+featured-post-slider:                   true
+
+#-------------------------------------------------------------------------------
+# Hero Section (Masthead|Master Header)
+#
+hero:
+  hero-subtitle: >
+                                        I’m a Freelance Art Director based in France.
+                                        Focusing across branding and identity, digital and print.
+  # Add your banner image
+  hero-banner:                          /assets/images/parsa/masthead/banner-img.png
+
+# Copmress (HTML) settings
 #
 compress_html:
   enabled:                              true

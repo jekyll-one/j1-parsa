@@ -34,14 +34,39 @@ settings:
   #
   nav_bar:
     enabled:                            true
-    fixed:                              true
+
+    nav_item_color:                     '#424242'                               # gray-700
+    nav_item_color_hover:               '#fe6f00'                               # gray-900
+
+    background_color_full:              '#feefe6'                               # attic background-color
+    background_color_scrolled:          '#feefe6'                               # attic background-color, default: theme|bg_primary
+    background_color_collapsed:         '#feefe6'                               # attic background-color, default: theme|bg_primary
 
   # ----------------------------------------------------------------------------
   # NavMenu (Desktop)
   #
   nav_menu:
     enabled:                            true
-    delay_open_menu:                    150
+
+    menu_item_color:                    '#212121'                               # gray-900 rgba-lighten
+    menu_item_color_hover:              '#fe6f00'                               # gray-500 rgba-lighten-900
+
+  # ----------------------------------------------------------------------------
+  # NavQuicklinks
+  #
+  nav_quicklinks:
+    enabled:                            true
+
+    icon_color:                         '#424242'                               # gray-500
+    icon_color_hover:                   '#fe6f00'                               # gray-800
+
+    # home_url:                           /                                     # none | URL
+
+  # ----------------------------------------------------------------------------
+  # NavTopsearch
+  #
+  nav_topsearch:
+    enabled:                            true
 
   # ----------------------------------------------------------------------------
   # NavMenu (MMobile)
@@ -206,27 +231,6 @@ settings:
                       value:            ??cookie-state
                       href:             ??provider_privacy_url
                       target:           none
-
-  # ----------------------------------------------------------------------------
-  # NavQuicklinks
-  #
-  nav_quicklinks:
-    enabled:                            true
-
-    home_url:                           /                                       # none | URL
-    back_url:                           none                                    # none | URL
-
-    r_text_sizer:                       false                                   # true | false
-
-    github_url:                         none                                    # https://github.com/jekyll-one
-    disqus_url:                         none                                    # https://disqus.com/
-    patreon_url:                        none                                    # https://www.patreon.com/jekyll_one/posts
-
-  # ----------------------------------------------------------------------------
-  # NavTopsearch
-  #
-  nav_topsearch:
-    enabled:                            true
 
 # ------------------------------------------------------------------------------
 # END config

@@ -1,12 +1,12 @@
 ---
 layout:                                 post
 
-title:                                  Food Example 3
+title:                                  Food Example 12
 tagline:                                Natural Food
 description:                            Place your meta description here
 
 image:
-  path:                                 /assets/images/parsa/masonary-post/post-3.jpg
+  path:                                 /assets/images/parsa/masonary-post/post-12.jpg
   width:                                1920
   height:                               1280
   alt:                                  Post Image

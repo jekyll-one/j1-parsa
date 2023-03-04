@@ -1,5 +1,6 @@
 <!-- All posts -->
 
+<!-- Title -->
 <section id="all-posts" class="section pt-5">
   <div class="container">
     <div class="row">
@@ -9,28 +10,42 @@
     </div>
   </div>
 </section>
+<!-- /Title -->
 
 <section class="section">
+  <!-- Posts -->
   <div class="container">
     <div class="row masonry-container">
 			{% if site.posts.size > 0 %}
 			{% for post in paginator.posts %}
       <div class="col-lg-4 col-sm-6 mb-5">
         <article class="text-center">
-					<img class="img-fluid mb-4" src="{{post.image | relative_url}}" alt="{{post.title}}">
+					<img class="img-fluid mb-4" src="{{post.image.path | relative_url}}" alt="{{post.title}}">
 					{% if post %}
 						{% assign categories = post.categories %}
 					{% else %}
 					{% assign categories = page.categories %}
 					{% endif %}
 					{% for category in post.categories %}
-          <a class="d-block mb-3 text-dark text-uppercase link-no-decoration" href="{{ 'category/' | relative_url }}{{ category | slugify }}">{{ category }}</a>
+          <a class="d-block text-dark text-uppercase link-no-decoration mb-1" href="{{'category/' | relative_url }}{{ category | slugify}}" style="font-size: 24px;">{{category}}</a>
+
+          <ul class="list-inline d-flex justify-content-center py-3 mb-3" style="font-size: 18px; font-weight: 400; color: #212121">
+            <li class="list-inline-item">
+              <i class="mdi mdi-account md-orange-700 mdi-18px mr-1" style="margin-right: 8px;"></i>
+              {{site.author.name | split: ' ' | first}} &nbsp;&middot;&nbsp;&nbsp;
+            </li>
+            <li class="list-inline-item">
+              <i class="mdi mdi-calendar-blank md-orange-700 mdi-18px mr-1"></i>
+              {{post.date | date: '%b %d, %Y'}}
+            </li>
+          </ul>
+
           {% endfor %}
           <h4 class="title-border">
-            <a class="text-dark link-no-decoration" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+            <a class="text-dark link-no-decoration" href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
           </h4>
-          <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline">read &nbsp;&nbsp;&middot;&nbsp;{{post.tagline}}</a>
+          <p>{{post.content | strip_html | truncatewords: 35}}</p>
+          <a href="{{post.url | prepend: site.baseurl}}" class="btn btn-outline">read &nbsp;&nbsp;&middot;&nbsp;{{post.tagline}}</a>
         </article>
       </div>
 			{% endfor %}
@@ -38,5 +53,7 @@
     </div>
     {% include custom/parsa/templates/pagination.html %}
   </div>
+  <!-- /Posts -->
 </section>
+
 <!-- /All posts -->

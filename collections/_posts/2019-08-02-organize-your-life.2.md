@@ -3,10 +3,22 @@ layout:                                 post
 
 title:                                  Organize Your Life With 5 Simple rules
 tagline:                                Modern Living
-description:                            This is meta description
-featured:                               true
-image:                                  /assets/images/parsa/featured-post/post-2.jpg
+description:                            Place your meta description here
+
 categories:                             [ Activity ]
+tags:                                   [ Life ]
+
+image:
+  path:                                 /assets/images/parsa/featured-post/post-2.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Post Image
+
+toc:                                    true
+fab_menu_id:                            open_toc
+scrollbar:                              false
+featured:                               true
+regenerate:                             false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et

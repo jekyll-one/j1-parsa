@@ -47,13 +47,13 @@
 #   values:                             development|production
 #   default:                            development
 #
-environment:                            production
+environment:                            development
 
 # version
 # ------------------------------------------------------------------------------
 # Sets the build version of the site
 #
-version:                                2023.0.17
+version:                                2023.1.0
 
 # copyright
 # ------------------------------------------------------------------------------
@@ -346,8 +346,8 @@ permalink:                              pretty
 # site.url will be set to the value of host, port.
 # NOTE: Required setting for the sitemap plugin, for example.
 #
-# url:                                http://localhost:25000
-url:                                  https://parsa.jekyll.one
+url:                                    http://localhost:25000
+# url:                                  https://parsa.jekyll.one
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the
@@ -718,8 +718,10 @@ defaults:
         index:                          true
         follow:                         true
 
-      fab_menu_id:                      default
+      toc:                              true
+      fab_menu_id:                      open_toc
       scrollbar:                        false
+      comments:                         false
       personalization:                  false
       exclude_from_search:              false
 
@@ -745,11 +747,13 @@ defaults:
         index:                          true
         follow:                         true
 
-      fab_menu_id:                      default
+      toc:                              true
+      fab_menu_id:                      open_toc
       scrollbar:                        false
-      page_navigation:                  true
+      comments:                         false
       personalization:                  false
       exclude_from_search:              false
+
 
 
 # ==============================================================================

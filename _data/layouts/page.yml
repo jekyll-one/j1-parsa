@@ -131,12 +131,22 @@ lanes:
   # ----------------------------------------------------------------------------
   #
   - lane:
-      enabled:                          true
+      enabled:                          false
       region:                           body-header
       type:                             sync
       base:                             _includes/themes/j1
       path:                             modules/attics
       file:                             generator.html
+
+  # ----------------------------------------------------------------------------
+  #
+  - lane:
+      enabled:                          true
+      region:                           body-header
+      type:                             sync
+      base:                             _includes/custom/parsa
+      path:                             templates
+      file:                             masthead.html
 
   # ----------------------------------------------------------------------------
   # CONTENT region (region body-main)

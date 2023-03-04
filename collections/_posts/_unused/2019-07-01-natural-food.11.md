@@ -1,11 +1,18 @@
 ---
 layout:                                 post
 
-title:                                  Food Example 6
+title:                                  Food Example 11
 tagline:                                Natural Food
-description:                            This is meta description
-image:                                  /assets/images/parsa/masonary-post/post-6.jpg
+description:                            Place your meta description here
+
+image:
+  path:                                 /assets/images/parsa/masonary-post/post-11.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Post Image
+
 categories:                             [ Food ]
+regenerate:                             false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et

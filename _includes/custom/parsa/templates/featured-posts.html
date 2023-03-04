@@ -1,4 +1,6 @@
 <!-- Featured posts -->
+
+<!-- Title -->
 <section id="featured-posts" class="section pt-5">
   <div class="container">
     <div class="row">
@@ -8,29 +10,40 @@
     </div>
   </div>
 </section>
+<!-- /Title -->
 
 <section>
   <div class="container-fluid p-sm-0">
+    <!-- Posts -->
     <div class="row featured-post-slider">
       {% for post in site.posts %}
       {% if post.featured == true %}
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
-          <img class="card-img rounded-0 img-fluid w-100" src="{{post.image | relative_url}}" alt="{{post.title}}">
+          <img class="card-img rounded-0 img-fluid w-100" src="{{post.image.path | relative_url}}" alt="{{post.title}}">
           <div class="card-img-overlay">
             <div class="card-content">
               {% if post %}
                 {% assign categories = post.categories %}
               {% else %}
-              {% assign categories = page.categories %}
+                {% assign categories = page.categories %}
               {% endif %}
               {% for category in post.categories %}
-              <a class="d-block text-white text-uppercase link-no-decoration pb-5" href="{{ 'category/' | relative_url }}{{ category | slugify }}">{{ category }}</a>
+              <a class="d-block text-white text-uppercase link-no-decoration mt-3 pb-1" href="{{'category/' | relative_url}}{{category | slugify}}" style="font-size: 24px;">{{category}}</a>
               {% endfor %}
-              <h4 class="card-title mt-3 mb-5">
-                <a class="text-white link-no-decoration pt-3" href="{{ post.url | relative_url }}">{{post.title}}</a>
+              <ul class="list-inline d-flex justify-content-center py-3 mb-5" style="font-size: 18px; font-weight: 400; color: #212121">
+      					<li class="list-inline-item">
+                  <i class="mdi mdi-account md-orange-700 mdi-18px mr-1" style="margin-right: 8px;"></i>
+                  {{site.author.name | split: ' ' | first}} &nbsp;&middot;&nbsp;&nbsp;
+                </li>
+      					<li class="list-inline-item">
+                  <i class="mdi mdi-calendar-blank md-orange-700 mdi-18px mr-1"></i>
+                  {{post.date | date: '%b %d, %Y'}}
+                </li>
+      				</ul>
+              <h4 class="card-title mt-5">
+                <a class="text-white link-no-decoration pt-3" href="{{post.url | relative_url}}">{{post.title}}</a>
               </h4>
-              <a class="btn btn-outline-light mt-5" href="{{ post.url | relative_url }}">read &nbsp;&nbsp;&middot;&nbsp;{{post.tagline}}</a>
             </div>
           </div>
         </article>
@@ -38,6 +51,7 @@
       {% endif %}
       {% endfor %}
     </div>
+    <!-- /Posts -->
   </div>
 </section>
 <!-- /Featured posts -->

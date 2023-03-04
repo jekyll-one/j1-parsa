@@ -1,25 +1,24 @@
 ---
-title:                                  Theme Preview
-tagline:                                Explore Current Styles
-date:                                   2022-12-01 00:00:00
+title:                                  Preview
+tagline:                                Explore Current Theme
+date:                                   2023-03-04 00:00:00
 description: >
-                                        Parsa is a popular HTML theme offered by ThemeFisher.
-                                        I have Jekyllised this theme to give web developers and
-                                        hobbyists a simple and clean implimentation in Jekyll
-                                        for starting a new blog site.
-                                        <br/><br/>
-                                        This template is <b>free and open source</b>, released
-                                        under the MIT license.
+                                        Parsa is based on a popular HTML theme offered by ThemeFisher.
+                                        This Jekyllised version of the theme give web developers and
+                                        hobbyists a simple and clean implementation in Jekyll for
+                                        starting an awesome new blog site.
 
 categories:                             [ Previewer ]
 tags:                                   [ Bootstrap, CSS, Theme, Parsa ]
 
-comments:                               false
-fab_menu_id:                            default
-scrollbar:                              false
+image:
+  path:                                 /assets/images/parsa/masthead/banner-img.png
+  width:                                410
+  height:                               580
+  alt:                                  Banner Image
 
-permalink:                              /pages/public/previewer/theme/
 regenerate:                             false
+permalink:                              /pages/public/previewer/theme/
 
 resources:                              [ animate, clipboard, rouge ]
 ---
@@ -95,10 +94,11 @@ resources:                              [ animate, clipboard, rouge ]
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-JekyllOne is a theme for multifunctional Bootstrap-based and responsive
-websites, and offers various unique functionalities compared to other themes
-and templates for Jekyll. Themes for Bootstrap are used to customize the appearance
-of a website based on the basic rules and definitions of Bootstrap's CSS styles.
+Parsa is based on a popular HTML theme offered by ThemeFisher. This Jekyllised
+version of the theme give web developers and hobbyists a simple and clean
+implimentation in Jekyll an awesome new blog site.
+
+This template is free and open source, released under the MIT license.
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------

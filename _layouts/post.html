@@ -2,32 +2,75 @@
 layout:                                 default
 ---
 
-<!-- Page-title -->
+{% comment %} Process YML config data
+================================================================================ {% endcomment %}
+
+{% comment %} Set config files
+-------------------------------------------------------------------------------- {% endcomment %}
+{% assign template_config   = site.data.j1_config %}
+{% assign blocks            = site.data.blocks %}
+{% assign modules           = site.data.modules %}
+{% assign builder           = site.data.builder %}
+{% assign plugins           = site.data.plugins %}
+
+{% comment %} Set config data
+-------------------------------------------------------------------------------- {% endcomment %}
+
+{% comment %} Set config options
+-------------------------------------------------------------------------------- {% endcomment %}
+
+{% comment %} Variables
+-------------------------------------------------------------------------------- {% endcomment %}
+{% assign rtext            = template_config.typography.rtext %}
+{% assign page_rtext       = page.rtext %}
+{% assign page_rtext_size  = page.rtext_size %}
+
+{% if rtext %}
+ {% assign rtext_size = template_config.typography.rtext_size %}
+{% else %}
+ {% assign rtext_size = 0 %}
+{% endif %}
+
+
+{% comment %} Main
+================================================================================ {% endcomment %}
+
+<!-- Post title -->
 <section class="section-lg bg-secondary mt-6 mb-5">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h4>{{ page.title | escape }}</h4>
-        <h6>{{ page.tagline }}</h6>
+				<h3>{{page.title | escape}}</h3>
+        <h4>{{page.tagline}}</h4>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- /Page-title -->
+<!-- /Post title -->
 
-<!-- Blog post -->
+<!-- Post content -->
 <section>
-	<div class="container">
+	<div class="container mb-5">
 		<div class="row">
 			<div class="col-lg-8">
 				<ul class="list-inline d-flex py-3">
-					<li class="list-inline-item"><i class="ti-user" style="margin-right: 8px;"></i>Post by {{site.author.name}}&nbsp;&nbsp;&middot;&nbsp;</li>
-					<li class="list-inline-item"><i class="ti-calendar" style="margin-right: 8px;"></i>{{page.date | date: '%b %d, %Y'}}</li>
+					<li class="list-inline-item">
+            <i class="mdi mdi-account md-grey-900 mr-1" style="margin-right: 8px;"></i>
+            {{site.author.name}} &nbsp;&middot;&nbsp;&nbsp;
+          </li>
+					<li class="list-inline-item">
+            <i class="mdi mdi-calendar-blank md-grey-900 mr-1"></i>
+            {{page.date | date: '%b %d, %Y'}} &nbsp;&middot;&nbsp;&nbsp;
+          </li>
+          <li class="list-inline-item">
+            <i class="mdi mdi-tag-text-outline md-grey-900 mr-1" style="margin-right: 8px;"></i>
+            {{page.categories[0]}}
+          </li>
 				</ul>
 				{% if page.image %}
-				<img src="{{page.image | relative_url}}" alt="{{page.title}}" class="w-100 img-fluid mb-4">
+				<img src="{{page.image.path | relative_url}}" alt="{{page.title}}" class="w-100 img-fluid mb-5">
 				{% endif %}
-				<div class="content">
+				<div id="main-content" class="content r-text-{{rtext_size}} js-toc-content">
 					{{ content }}
 				</div>
 				{% if site.disqus-identifier %}
@@ -38,10 +81,4 @@ layout:                                 default
 		</div>
 	</div>
 </section>
-<!-- Blog post -->
-
-<!-- Scroll top button -->
-<a href="" class="scrollup" aria-label="Scroll Up">
-  <img src="/assets/images/parsa/icons/up.svg" alt="scroll-up">
-</a>
-<!-- /Scroll top button -->
+<!-- /Post content -->

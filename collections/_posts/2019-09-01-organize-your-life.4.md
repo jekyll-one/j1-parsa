@@ -1,11 +1,24 @@
 ---
 layout:                                 post
 
-title:                                  Food Example 11
-tagline:                                Natural Food
-description:                            This is meta description
-image:                                  /assets/images/parsa/masonary-post/post-11.jpg
-categories:                             [ Food ]
+title:                                  Organize Your Life With 5 Simple rules
+tagline:                                Modern Living
+description:                            Place your meta description here
+
+categories:                             [ Balance ]
+tags:                                   [ Life ]
+
+image:
+  path:                                 /assets/images/parsa/featured-post/post-4.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Post Image
+
+toc:                                    true
+fab_menu_id:                            open_toc
+scrollbar:                              false
+featured:                               true
+regenerate:                             false
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
