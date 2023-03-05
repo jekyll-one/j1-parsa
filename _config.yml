@@ -643,19 +643,20 @@ collections:
 logo:                                   /assets/images/icons/parsa/scalable/logo.svg
 
 contact:
-  email:                                example@ymail.com
-  phone:                                +90 000 333 22
+  email:                                jhon@abraham.com
+  phone:                                +33 123 456 78
   address:
-    city:                               Sydney
-    street:                             6 rip carl Avenue CA 90733
+    city:                               33500 Libourne
+    street:                             52 Rue Des Fleurs
 
 # Social links
 #
-social:
-  - { icon: "mdi mdi-github",   link: "https://github.com/jekyll-one/jekyll-parsa" }
-  - { icon: "mdi mdi-facebook", link: "https://www.facebook.com/" }
-  - { icon: "mdi mdi-twitter",  link: "https://twitter.com/home" }
-  - { icon: "mdi mdi-linkedin", link: "https://www.linkedin.com/" }
+social:                                 [
+                                          {icon: mdi mdi-github,   link: https://github.com/jekyll-one/jekyll-parsa},
+                                          {icon: mdi mdi-facebook, link: https://www.facebook.com/},
+                                          {icon: mdi mdi-twitter,  link: https://twitter.com/home},
+                                          {icon: mdi mdi-linkedin, link: https://www.linkedin.com/}
+                                        ]
 
 
 # ------------------------------------------------------------------------------

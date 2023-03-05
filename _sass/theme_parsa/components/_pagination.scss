@@ -1,0 +1,42 @@
+//
+// Pagination
+//
+
+.pagination .page-item .page-link {
+  font-family: "hanskendrick";
+  font-size: 18px;
+  border: 0;
+  color: #585757;
+}
+
+.pagination .page-item .page-link:hover {
+  color: #000000;
+  background-color: transparent;
+}
+
+.pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
+  font-size: 18px;
+}
+
+.pagination .page-item.active .page-link {
+  color: #000000;
+  text-decoration: underline;
+  background: transparent;
+}
+
+@media (max-width: 767px) {
+  .pagination .page-item .page-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .pagination {
+    overflow: auto;
+    white-space: nowrap;
+  }
+  .pagination::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}

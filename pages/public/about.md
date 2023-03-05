@@ -7,6 +7,18 @@ description: >
                                         based in France. Focusing across branding and identity,
                                         digital and print.
 
+categories:                             [ About ]
+tags:                                   [ Theme, Parsa ]
+
+#image:
+#  path:                                 /assets/images/parsa/featured-post/post-1.jpg
+#  width:                                1920
+#  height:                               1280
+#  alt:                                  Post Image
+
+fab_menu_id:                            default
+scrollbar:                              false
+regenerate:                             false
 permalink:                              /about/
 ---
 
