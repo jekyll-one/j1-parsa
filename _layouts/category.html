@@ -2,6 +2,11 @@
 layout:                                 default
 ---
 
+{% comment %} Control settings
+-------------------------------------------------------------------------------- {% endcomment %}
+{% assign exclude_from_search = true %}
+
+
 <!-- Page title -->
 <section class="section-lg bg-secondary mt-6 mb-5">
   <div class="container">
@@ -38,12 +43,12 @@ layout:                                 default
               </ul>
               <img class="img-fluid mb-4" src="{{post.image.path | relative_url }}" alt="{{post.title}}">
               {% for category in post.categories %}
-              <a class="d-block mb-3 text-dark text-uppercase link-no-decoration" href="{{'category/' | relative_url }}{{category | slugify}}" style="font-size: 24px;">{{category}}</a>
+              <a class="d-block mb-3 text-dark text-uppercase link-no-decoration" href="{{site.jekyll-archives.category_archive_path | relative_url }}{{category | slugify}}" style="font-size: 24px;">{{category}}</a>
               {% endfor %}
               <h4 class="title-border">
                 <a class="text-dark link-no-decoration" href="{{post.url | relative_url}}">{{post.title}}</a>
               </h4>
-              <p>{{post.content | strip_html | truncatewords: 35}}</p>
+              <p>{{post.excerpt | strip_html | truncatewords: 35}}</p>
               <a href="{{post.url | relative_url}}" class="btn btn-outline mb-4">read &nbsp;&nbsp;&middot;&nbsp;{{post.tagline}}</a>
 
             </article>

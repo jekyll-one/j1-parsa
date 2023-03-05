@@ -1,0 +1,55 @@
+//
+// Hero Section (Masterheader)
+//
+
+// overwrite J1 Styles if NO Masterheader (attic) is used for a layout
+// see: _data/modules/attics.yml
+.no-attic {
+  display:  none;
+}
+
+.hero-section {
+  padding-top: 3rem;
+
+  .hero-section-heading {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+  }
+  .hero-section-subheading {
+    font-size: 1.25rem;
+  }
+  .hero-section-avatar {
+    width: 15rem;
+  }
+}
+
+// @include media-breakpoint-up(lg) {
+//   .hero-section {
+//     padding-top: 3rem;
+//
+//     .hero-section-heading {
+//       font-size: 4rem;
+//       line-height: 3.5rem;
+//     }
+//     .hero-section-subheading {
+//       font-size: 1.5rem;
+//     }
+//   }
+// }
+
+
+// .hero-section {
+//     margin-top: 4.75rem;
+// }
+
+// @media only screen and (max-width: 1024px) {
+//   .hero-section {
+//     margin-top: 3.25rem;
+//   }
+// }
+//
+// @media only screen and (max-width: 480px) {
+//   .hero-section {
+//     margin-top: 3.25rem;
+//   }
+// }

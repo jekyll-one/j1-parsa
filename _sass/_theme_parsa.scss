@@ -24,9 +24,6 @@
 
 $theme: "Parsa" !default;
 
-// BS|Theme BASE goes here
-// =============================================================================
-
 // Variables
 // -----------------------------------------------------------------------------
 @import "./theme_parsa/variables";
@@ -35,33 +32,40 @@ $theme: "Parsa" !default;
 // -----------------------------------------------------------------------------
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// BS|Theme overrides goes here
-// =============================================================================
+
+//Global Theme overrides goes here
+// -----------------------------------------------------------------------------
 @import "./theme_parsa/styles.scss";
 @import "./theme_parsa/colors";
 
-// Theme CSS globals
-// -----------------------------------------------------------------------------
-// @import "./theme_parsa/global.scss";
-
 // Components
 // -----------------------------------------------------------------------------
-@import "./theme_parsa/components/anchors.scss";
+@import "./theme_parsa/components/anchor.scss";
 @import "./theme_parsa/components/blog.scss";
-@import "./theme_parsa/components/buttons.scss";
-@import "./theme_parsa/components/forms.scss";
-@import "./theme_parsa/components/headroom.scss";
+@import "./theme_parsa/components/body.scss";
+@import "./theme_parsa/components/button.scss";
+@import "./theme_parsa/components/card.scss";
+@import "./theme_parsa/components/form.scss";
+@import "./theme_parsa/components/headline.scss";
+@import "./theme_parsa/components/image.scss";
 @import "./theme_parsa/components/instagram.scss";
-@import "./theme_parsa/components/lists.scss";
+@import "./theme_parsa/components/list.scss";
 @import "./theme_parsa/components/navbar.scss";
 @import "./theme_parsa/components/overlay.scss";
 @import "./theme_parsa/components/pagination.scss";
-@import "./theme_parsa/components/preloader.scss";
-@import "./theme_parsa/components/quotes.scss";
-@import "./theme_parsa/components/slick.scss";
+@import "./theme_parsa/components/paragraph.scss";
+@import "./theme_parsa/components/quote.scss";
+@import "./theme_parsa/components/section.scss";
+@import "./theme_parsa/components/typography.scss";
 
-// Theme CSS sections
+// Modules
 // -----------------------------------------------------------------------------
-// @import "./theme_parsa/sections/footer.scss";
+@import "./theme_parsa/modules/headroom.scss";
+@import "./theme_parsa/modules/slick.scss";
+
+// Sections
+// -----------------------------------------------------------------------------
+@import "./theme_parsa/sections/footer.scss";
 @import "./theme_parsa/sections/masthead.scss";
 @import "./theme_parsa/sections/portfolio.scss";
+@import "./theme_parsa/sections/preloader.scss";

@@ -1,6 +1,6 @@
 <!-- Portfolio Grid-->
 <section id="portfolio" class="page-section pt-5">
-  <div class="container">
+  <div class="container mt-5">
 
     <div class="text-center mb-5">
     	<h2 class="text-uppercase mb-0">Portfolio</h2>
@@ -14,7 +14,7 @@
       <div class="col-lg-4 col-sm-6 mb-4">
         <!-- Portfolio item -->
         <div class="portfolio-item">
-          <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal{{ forloop.index }}">
+          <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal{{forloop.index}}">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="mdi mdi-plus mdi-10x"></i>
@@ -23,8 +23,8 @@
             <img class="img-fluid" src="{{ collection.image }}" alt="..." />
           </a>
           <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">{{ collection.title }}</div>
-            <div class="portfolio-caption-subheading text-muted">{{ collection.category }}</div>
+            <div class="portfolio-caption-heading">{{collection.title}}</div>
+            <div class="portfolio-caption-subheading text-muted">{{collection.category}}</div>
           </div>
         </div>
       </div>
@@ -35,12 +35,12 @@
 
 <!-- Portfolio Modals-->
 {% for collection in collections %}
-<div class="portfolio-modal modal fade" id="portfolioModal{{ forloop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="portfolio-modal modal fade" id="portfolioModal{{forloop.index}}" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="close-modal" data-bs-dismiss="modal">
-        <img src="{{ '/assets/images/parsa/icons/close-icon.svg' | relative_url }}" alt="Close modal" />
+        <img src="{{'/assets/images/parsa/icons/close-icon.svg' | relative_url}}" alt="Close modal" />
       </div>
 
       <div class="container">
@@ -48,9 +48,9 @@
           <div class="col-lg-8">
             <div class="modal-body">
               <!-- Project details-->
-              <h2 class="text-uppercase">{{ collection.title }}</h2>
+              <h2 class="text-uppercase">{{collection.title}}</h2>
               <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-              <img class="img-fluid d-block mx-auto" src="{{ collection.image | relative_url }}" alt="..." />
+              <img class="img-fluid d-block mx-auto" src="{{collection.image | relative_url}}" alt="Portfolio" />
               <p>
                 Use this area to describe your project. Lorem ipsum dolor sit amet,
                 consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt
@@ -69,9 +69,8 @@
                 </li>
               </ul>
               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-              <!-- i class="fas fa-xmark me-1"></i -->
-              <i class="mdi mdi-close mdi-24px mx-2"></i>
-              Close Project
+                <i class="mdi mdi-close mdi-24px mx-2"></i>
+                Close Project
               </button>
             </div>
           </div>

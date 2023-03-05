@@ -1,0 +1,95 @@
+---
+title:                                  Contact Me
+tagline:                                I love to hear from you
+date:                                   2023-02-21 00:00:00
+description: >
+                                        I’m Jhon Abraham, a Freelance Art Director based
+                                        in France. Focusing across branding and identity,
+                                        digital and print.
+
+categories:                             [ Contact ]
+tags:                                   [ Theme, Parsa ]
+
+image:
+  path:                                 /assets/images/parsa/featured-post/post-1.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Post Image
+
+fab_menu_id:                            default
+scrollbar:                              false
+regenerate:                             false
+permalink:                              /pages/public/contact/
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+:url-j1-jupyter-notebooks--where-to-go: /pages/public/jupyter/where-to-go/
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[role="dropcap"]
+Contact forms are an important tool for communication between websites and
+their users. They allow users to quickly and easily ask questions, give
+feedback, or report problems without writing an email or looking up a phone
+number. Contact forms are also an effective way for businesses to collect
+information from users that can be used for marketing and improving their
+services and products.
+
+Another advantage of contact forms is that they can ensure the security of
+data transmission. Many contact forms are programmed to use a secure SSL
+connection to ensure that the data submitted is encrypted and protected from
+unauthorized access.
+
+[role="mb-5"]
+In summary, contact forms help facilitate communication between users and
+websites, collect information from users, and ensure the security of data
+transmission.
+
+++++
+<form action="https://formspree.io/{{ site.contact-form }}" method="POST" class="row mt-5">
+
+  <div class="col-lg-6">
+    <input type="text" class="form-control mb-4" name="name" id="name" placeholder="Name">
+  </div>
+
+  <div class="col-lg-6">
+    <input type="email" class="form-control mb-4" name="_replyto" id="email" placeholder="Email">
+  </div>
+
+  <div class="col-12">
+    <textarea name="message" id="message" class="form-control mb-4" placeholder="Message..."></textarea>
+  </div>
+
+  <div class="col-12">
+    <div class="d-grid gap-2">
+      <button id="submitButton" class="btn btn-primary disabled mt-6" type="submit">Submit</button>
+    </div>
+  </div>
+
+</form>
+++++
+
+++++
+<div class="mt-5 mb-10">
+  <p>
+    I love to hear from you, <br />
+    sincerely yours <br /><br />
+    Jhon Abraham
+  </p>
+</div>
+++++

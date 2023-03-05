@@ -10,7 +10,7 @@
     <ul class="list-inline tag-list">
       {% for category in site.categories %}
       <li class="list-inline-item m-1">
-        <a class="link-no-decoration" href="{{'category/' | relative_url}}{{category | first | slugify}}">{{category | first}}</a>
+        <a class="link-no-decoration" href="{{site.jekyll-archives.category_archive_path | relative_url}}{{category | first | slugify}}">{{category | first}}</a>
       </li>
       {% unless forloop.last %} {% endunless %}
       {% endfor %}

@@ -71,7 +71,7 @@ layout:                                 default
 				<img src="{{page.image.path | relative_url}}" alt="{{page.title}}" class="w-100 img-fluid mb-5">
 				{% endif %}
 				<div id="main-content" class="content r-text-{{rtext_size}} js-toc-content">
-					{{ content }}
+					{{content}}
 				</div>
 				{% if site.disqus-identifier %}
 				{% include custom/parsa/static/disqus-comments.html %}

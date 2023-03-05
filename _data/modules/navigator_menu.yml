@@ -29,13 +29,13 @@
   href:                                 /#all-posts
 
 - item:                                 CONTACT
-  href:                                 /contact/
+  href:                                 /pages/public/contact/
 
 - item:                                 THEME
   href:                                 /pages/public/previewer/theme/
-  
+
 - item:                                 ABOUT
-  href:                                 /about/
+  href:                                 /pages/public/about/
 
 # ------------------------------------------------------------------------------
 # MENU-LEVEL items (sub-menu)

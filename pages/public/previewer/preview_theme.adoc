@@ -2965,7 +2965,7 @@ endif::[]
   var user_state        = j1.readCookie(cookie_names.user_state);
   var theme_slogans     = {};
 
-  theme_slogans.Parsa  = 'A personal blog';
+  theme_slogans.Parsa  = 'An awesome personal blog';
 
   themeName             = user_state.theme_name;
   theme_slogan          = theme_slogans[themeName];

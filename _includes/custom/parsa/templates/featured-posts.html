@@ -2,10 +2,12 @@
 
 <!-- Title -->
 <section id="featured-posts" class="section pt-5">
-  <div class="container">
+  <div class="container mt-5">
     <div class="row">
-      <div class="col-lg-12">
-        <h2 class="text-center">Featured Posts</h2>
+      <div class="col-lg-12 text-center">
+        <h2>Featured Posts</h2>
+        <p class="h3 text-muted mb-0"><i>top articles</i></p>
+        <div class="d-inline-block g-width-50 g-height-2 bg-primary mb-2"></div>
       </div>
     </div>
   </div>
@@ -14,8 +16,9 @@
 
 <section>
   <div class="container-fluid p-sm-0">
+
     <!-- Posts -->
-    <div class="row featured-post-slider">
+    <div class="row featured-post-slider pb-5">
       {% for post in site.posts %}
       {% if post.featured == true %}
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
@@ -29,7 +32,7 @@
                 {% assign categories = page.categories %}
               {% endif %}
               {% for category in post.categories %}
-              <a class="d-block text-white text-uppercase link-no-decoration mt-3 pb-1" href="{{'category/' | relative_url}}{{category | slugify}}" style="font-size: 24px;">{{category}}</a>
+              <a class="d-block text-white text-uppercase link-no-decoration mt-3 pb-1" href="{{site.jekyll-archives.category_archive_path | relative_url}}{{category | slugify}}" style="font-size: 24px;">{{category}}</a>
               {% endfor %}
               <ul class="list-inline d-flex justify-content-center py-3 mb-5" style="font-size: 18px; font-weight: 400; color: #212121">
       					<li class="list-inline-item">
@@ -52,6 +55,7 @@
       {% endfor %}
     </div>
     <!-- /Posts -->
+
   </div>
 </section>
 <!-- /Featured posts -->

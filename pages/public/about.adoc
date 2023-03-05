@@ -1,0 +1,76 @@
+---
+title:                                  About Me
+tagline:                                Hello, I’m Jhon Abraham
+date:                                   2023-02-21 00:00:00
+description: >
+                                        I’m Jhon Abraham, a Freelance Art Director based
+                                        in France. Focusing across branding and identity,
+                                        digital and print.
+
+categories:                             [ About ]
+tags:                                   [ Theme, Parsa ]
+
+#image:
+#  path:                                 /assets/images/parsa/featured-post/post-1.jpg
+#  width:                                1920
+#  height:                               1280
+#  alt:                                  Post Image
+
+fab_menu_id:                            default
+scrollbar:                              false
+regenerate:                             false
+permalink:                              /pages/public/about/
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[role="dropcap"]
+Creative UI/UX designers like me love to craft beautiful that satisfy user's
+needs the product. A good design is aesthetically pleasing, functional, and
+user-centric. It is important that the design considers the needs and desires
+of the users and puts them at the center.
+
+[role="mb-5"]
+A well-designed product can improve user experience and contribute to user
+satisfaction. In today's digital world, a responsive design is essential
+to attract and retain users.
+
+
+== My Passion
+
+My work refers to the design of the visual elements of a user interface,
+such as layouts, colors, typography, and images, that create an intuitive
+and appealing user experience. Good UI design considers brand identity,
+design guidelines, and usability to create a user-friendly and aestheticall
+pleasing interface.
+
+UI/UX design, on the other hand, refers to the process of creating a positive
+and seamless user experience. It involves understanding users' needs,
+expectations, and behaviors and ensuring that a website or app effectively
+meets their needs. UX designers work on designing navigation paths,
+information architecture, interaction design, and other elements that can
+influence the user experience.
+
+[role="mb-10"]
+Overall, my design experience is about designing digital products and services
+that are functional and aesthetically pleasing and provide a positive user
+experience. Through close collaboration between UI and UX designers, a
+seamless and intuitive user interface can be created that meets the needs
+and expectations of users and contributes to maximizing user satisfaction.

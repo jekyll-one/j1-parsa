@@ -1,0 +1,33 @@
+//
+// Quotes
+//
+
+.quoteblock blockquote:before {
+    float: left;
+    color: #0d47a1;
+    margin-left: -7.5rem;
+    content: '\0022';
+    position: absolute;
+    font-size: 10em;
+    font-weight: 900;
+    opacity: 0.2;
+    z-index: -1;
+    margin-top: -0.3em;
+}
+
+@media only screen and (max-width: 576px) {
+  .admonitionblock > table td.content {
+    border-left: 0;
+  }
+  .quoteblock blockquote:before {
+    font-size: 8em;
+    margin-left: -5rem !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .quoteblock blockquote:before {
+    font-size: 8em;
+    margin-left: -4.75rem !important;
+  }
+}

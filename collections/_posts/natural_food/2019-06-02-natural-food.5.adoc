@@ -1,0 +1,104 @@
+---
+title:                                  Food Example 5
+tagline:                                Natural Food
+description: >
+                                        Natural food refers to minimally processed food
+                                        containing no artificial ingredients, preservatives,
+                                        or additives. Natural food is often perceived as
+                                        healthier than processed food because it is closer
+                                        to its original form and contains more nutrients.
+
+categories:                             [ Food ]
+tags:                                   [ Life, Natural ]
+
+image:
+  path:                                 /assets/images/parsa/posts/natural_food/post-5.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Post Image
+
+regenerate:                             false
+---
+
+// Page Initializer
+// =============================================================================
+// Enable the Liquid Preprocessor
+:page-liquid:
+
+// Set (local) page attributes here
+// -----------------------------------------------------------------------------
+// :page--attr:                         <attr-value>
+
+// Place an excerpt at the most top position
+// -----------------------------------------------------------------------------
+[role="dropcap"]
+Natural food refers to minimally processed food containing no artificial
+ingredients, preservatives, or additives. Natural food is often perceived
+as healthier than processed food because it is closer to its original form
+and contains more nutrients.
+
+excerpt__end
+
+//  Load Liquid procedures
+// -----------------------------------------------------------------------------
+{% capture load_attributes %}themes/{{site.template.name}}/procedures/global/attributes_loader.proc{%endcapture%}
+
+// Load page attributes
+// -----------------------------------------------------------------------------
+{% include {{load_attributes}} scope="none" %}
+
+
+// Page content
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
+Examples of natural foods include fresh fruits and vegetables, whole grains,
+nuts and seeds, lean meats, and fish. These foods are often found in their
+natural state and are not heavily processed or refined. Depending on the
+farming practices used, they may also be produced without pesticides
+hormones, or antibiotics.
+
+In summary, natural food is minimally processed and contains no artificial
+ingredients or additives. It is often considered healthier and more nutritious
+than processed food and may offer a range of health benefits when consumed
+as part of a balanced diet.
+
+> Consuming natural foods can offer numerous health benefits, including
+improved digestion, increased nutrient intake, and reduced risk of chronic
+diseases such as heart disease, diabetes, and cancer. Natural foods are
+often more sustainable and environmentally friendly than heavily processed
+or packaged foods.
+
+[role="mt-3 mb-5"]
+image::parsa/posts/post-img.jpg[{{page.tagline}}]
+
+
+== Supporting Your Way
+
+There are several ways to incorporate more natural foods into your diet:
+
+. Shop for whole, unprocessed foods: Choose fresh fruits and vegetables,
+  whole grains, lean proteins, and minimally processed foods like nuts
+  and seeds.
+
+. Read food labels: Look for foods with simple ingredient lists and avoid
+  those with artificial colors, flavors, and preservatives.
+
+. Cook from scratch: Cooking at home allows you to control the ingredients
+  in your meals and avoid processed foods.
+
+. Buy organic: Choose organic foods whenever possible to avoid exposure
+  to pesticides, hormones, and antibiotics.
+
+. Shop at farmer's markets: Farmer's markets offer a variety of fresh,
+  locally grown produce and other natural foods.
+
+. Plan your meals: You must incorporate various natural foods into your diet.
+
+. Reduce your intake of processed foods: Gradually reduce your intake of
+  heavily processed foods and replace them with natural, whole foods.
+
+You can improve your overall health and well-being by incorporating more
+natural foods into your diet. Remember to make changes gradually and aim for
+a balanced, nutrient-rich diet that includes a variety of natural foods.
