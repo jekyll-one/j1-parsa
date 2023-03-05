@@ -1,12 +1,12 @@
 ---
 title:                                  Organize Your Life With Five Simple Rules
-tagline:                                Modern Living
+tagline:                                Modern living - Growth
 description: >
                                         Modern living refers to the way of life and the
                                         living conditions that have evolved with technological
                                         advancements, urbanization, and globalization.
 
-categories:                             [ Activity ]
+categories:                             [ Growth ]
 tags:                                   [ Life ]
 
 image:

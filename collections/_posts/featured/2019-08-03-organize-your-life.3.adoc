@@ -1,6 +1,6 @@
 ---
 title:                                  Organize Your Life With Five Simple Rules
-tagline:                                Modern Living
+tagline:                                Modern living - Technology
 description: >
                                         Modern living refers to the way of life and the
                                         living conditions that have evolved with technological

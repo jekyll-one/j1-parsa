@@ -1,39 +1,16 @@
 ---
-layout:                                 post
-
 title:                                  Organize Your Life With 5 Simple Rules
-tagline:                                Modern Living
-description:                            Place your meta description here
-
-categories:                             [ Nature ]
-tags:                                   [ Life ]
-
-image:
-  path:                                 /assets/images/parsa/posts/featured/post-5.jpg
-  width:                                1920
-  height:                               1280
-  alt:                                  Post Image
-
-toc:                                    true
-fab_menu_id:                            open_toc
-scrollbar:                              false
-featured:                               true
-regenerate:                             false
----
-
----
-title:                                  Organize Your Life With Five Simple rules
-tagline:                                Modern Living
+tagline:                                Modern living - Health
 description: >
                                         Modern living refers to the way of life and the
                                         living conditions that have evolved with technological
                                         advancements, urbanization, and globalization.
 
-categories:                             [ Nature ]
+categories:                             [ Health ]
 tags:                                   [ Life ]
 
 image:
-  path:                                 /assets/images/parsa/posts/featured/post-1.jpg
+  path:                                 /assets/images/parsa/posts/featured/post-5.jpg
   width:                                1920
   height:                               1280
   alt:                                  Post Image
