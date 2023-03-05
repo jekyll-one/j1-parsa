@@ -61,6 +61,7 @@ services more convenient and efficient. People can now work remotely, shop
 online, access entertainment, and connect with others from anywhere in the
 world.
 
+[role="mb-5"]
 Urbanization has also been a significant factor in shaping modern living.
 Cities have become commerce, industry, and innovation centers, attracting
 people from rural areas for better opportunities. Urbanization has led to
