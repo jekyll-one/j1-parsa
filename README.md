@@ -1,4 +1,4 @@
-# J1 Agency
+# J1 Parsa
 
 All you need for your new amazing site! Jekyll meets Bootstrap - and makes a
 lot of friends. J1 Agency combines

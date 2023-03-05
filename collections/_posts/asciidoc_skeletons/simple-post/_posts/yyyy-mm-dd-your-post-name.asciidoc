@@ -5,7 +5,7 @@ title:                                  Your Title
 tagline:                                Your Awesome Tagline
 
 categories:                             [ Theme ]
-tags:                                   [ Simple Post ]
+tags:                                   [ Template, Simple Post ]
 
 image:
   path:                                 /assets/images/modules/attics/sigmund-1920x1280.jpg
@@ -13,14 +13,14 @@ image:
   height:                               1280
   alt:                                  Photo by Sigmund on Unsplash
 
-#comments:                              false
-#personalization:                       false
-#exclude_from_search:                   false
-#series:                                false
-#toc:                                   true
-#fab_menu_id:                           page_ctrl_simple
-#scrollbar:                             false
-
+toc:                                    true
+comments:                               false
+personalization:                        false
+series:                                 false
+scrollbar:                              false
+sitemap:                                false
+exclude_from_search:                    true
+fab_menu_id:                            open_toc
 regenerate:                             false
 
 resources:                              [ animate ]

@@ -595,32 +595,24 @@ excerpt_separator:                      excerpt__end
 excerpt_truncate_words:                 100
 
 # ------------------------------------------------------------------------------
-# Paginator V1 configuration
+# Paginator V1 settings
 #
 paginate:                               6
-paginate_path:                          /page/:num
+paginate_path:                          /pages/public/paginator/:num            # permalink for paginator pages
 
-# Pages Path
-#
-defaults:
-  - scope:
-      path:                             pages
-    values:
-      permalink:                        /:basename:output_ext
-
-# Categories
+# ------------------------------------------------------------------------------
+# Archive settings
+# See: https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
 #
 jekyll-archives:
-  enabled:                              all
-  layout:                               category
-  permalinks:
-    category:                           /category/:name/
+  enabled:                              all                                     # enable all archives
+  tag_archive_path:                     pages/public/archives/tag/              # path tag archives are written to
+  category_archive_path:                pages/public/archives/category/         # path category archives are written to
 
-# Tags
-#
-# tag_page_dir:                           tag
-# tag_page_layout:                        tag_page
-# tag_permalink_style:                    pretty
+  layout:                               category                                # layout used for all archives
+  permalinks:
+    tag:                                /pages/public/archives/tag/:name/       # permalink for tag archives
+    category:                           /pages/public/archives/category/:name/  # permalink for category archives
 
 # ------------------------------------------------------------------------------
 # COLLECTION settings
@@ -632,10 +624,8 @@ collections:
   # Agency
   #
   portfolio:
-    output: true
-
-  team:
-    output: true
+    output:                             true
+    permalink:                          /collections/portfolio/:name/
 
 #-------------------------------------------------------------------------------
 # Footer settings
@@ -675,7 +665,7 @@ social:                                 [
 defaults:
 
   # ----------------------------------------------------------------------------
-  # HTML partials (loaded via XHR) excluded from sitemap
+  # HTML partials (most loaded via XHR) excluded from sitemap
   #
   - scope:
       path:                             assets/data
@@ -684,7 +674,7 @@ defaults:
       sitemap:                          false
 
   # ----------------------------------------------------------------------------
-  # Module HTML docs and examples excluded from sitemap
+  # HTML docs and examples excluded for all modules from sitemap
   #
   - scope:
       path:                             assets/themes/j1
@@ -693,10 +683,48 @@ defaults:
       sitemap:                          false
 
   # ----------------------------------------------------------------------------
-  # PAGES
+  # Archive HTML files (exported by `jekyll-archives`) excluded from sitemap
   #
   - scope:
-      path:                             pages
+      path:                             pages/public/archives
+
+    values:
+      sitemap:                          false
+
+  # ----------------------------------------------------------------------------
+  # Paginator HTML files (exported by Paginator V1) excluded from sitemap
+  # NOTE: Does NOT work that way
+  #
+  # - scope:
+  #     path:                             pages/public/paginator
+  #
+  #   values:
+  #     sitemap:                          false
+
+  # ----------------------------------------------------------------------------
+  # Posts (unneeded) excluded from sitemap
+  # TODO: Check why 'category' pages are exported by `jekyll-archives`
+  #       to document root
+
+  # ----------------------------------------------------------------------------
+  # Articles of 2019
+  # NOTE: Does NOT work that way
+  #
+  # - scope:
+  #     path:                             2019
+  #
+  #   values:
+  #     sitemap:                          false
+
+  # ----------------------------------------------------------------------------
+  # PAGES
+  #
+
+  # ----------------------------------------------------------------------------
+  # PUBLIC
+  #
+  - scope:
+      path:                             pages/public
       type:                             pages
 
     values:
@@ -719,8 +747,10 @@ defaults:
         index:                          true
         follow:                         true
 
-      fab_menu_id:                      default
+      toc:                              true
+      fab_menu_id:                      open_toc
       scrollbar:                        false
+      comments:                         false
       personalization:                  false
       exclude_from_search:              false
 
@@ -732,11 +762,12 @@ defaults:
   # PUBLIC - FEATURED
   #
   - scope:
-      path:                             posts/public/featured
+      path:                             collections/_posts/featured
       type:                             posts
 
     values:
       layout:                           post
+      permalink:                        /collections/posts/featured/:year/:month/:day/:title:output_ext
 
       author:
         name:                           Juergen Adams
@@ -746,9 +777,36 @@ defaults:
         index:                          true
         follow:                         true
 
-      fab_menu_id:                      default
+      toc:                              true
+      fab_menu_id:                      open_toc
       scrollbar:                        false
-      page_navigation:                  true
+      comments:                         false
+      personalization:                  false
+      exclude_from_search:              false
+
+  # ----------------------------------------------------------------------------
+  # PUBLIC - NATURAL FOOD
+  #
+  - scope:
+      path:                             collections/_posts/natural_food
+      type:                             posts
+
+    values:
+      layout:                           post
+      permalink:                        /collections/posts/natural_food/:year/:month/:day/:title:output_ext
+
+      author:
+        name:                           Juergen Adams
+        url:                            https://jekyll.one/
+
+      robots:
+        index:                          true
+        follow:                         true
+
+      toc:                              true
+      fab_menu_id:                      open_toc
+      scrollbar:                        false
+      comments:                         false
       personalization:                  false
       exclude_from_search:              false
 
