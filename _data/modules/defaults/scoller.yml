@@ -34,8 +34,8 @@ defaults:
   # SmoothScroll options
   # ----------------------------------------------------------------------------
   smoothscroll:
-    offsetCorrection:                   0
-
+    offsetCorrection:                   0                                       # used for 'remote' URLS (e.g. page loads),  offset in pixels
+    offsetCorrectionLocal:              0                                       # used for 'local' URLS (e.g. page anchors), offset in pixels
 
   # ----------------------------------------------------------------------------
   # Scroller options
