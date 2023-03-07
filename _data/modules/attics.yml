@@ -67,8 +67,8 @@ settings:
 #       background_color_1:             transparent
 #       background_color_2:             transparent
 
-        background_color_1:             "#0D47A1"                               # md-blue-900
-        background_color_2:             "#0D47A1"                               # md-blue-900
+        background_color_1:             "#0D47A1"                               # md-orange-900
+        background_color_2:             "#0D47A1"                               # md-orange-900
 
         filters:
           grayscale:                    0

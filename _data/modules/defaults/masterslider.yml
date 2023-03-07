@@ -32,7 +32,7 @@ defaults:
 
   icon_family:                          MDI
   icon_class:                           false                                   # false | fas | fab (Fontawsesome only)
-  icon_color:                           '#1E88E5'                               # md-blue-600
+  icon_color:                           '#1E88E5'                               # md-orange-600
   icon_size:                            2x
 
   # ----------------------------------------------------------------------------

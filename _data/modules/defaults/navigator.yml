@@ -67,7 +67,7 @@ defaults:
   icon_color:                           mdi-grey
   icon_size:                            mdi-sm
 
-  nav_primary_color:                    "#2196F3"                               # md-blue, general color for navbar and nav-menus
+  nav_primary_color:                    "#2196F3"                               # md-orange, general color for navbar and nav-menus
 
   # ----------------------------------------------------------------------------
   # NavBar
@@ -158,8 +158,8 @@ defaults:
     dropdown_border_color:              "#2196f3"                               # BS bg-primary
     dropdown_border_top:                0                                       # 3, px
     dropdown_border_radius:             2                                       # px
-    dropdown_background_color_hover:    "#ECEFF1"                               # md-bluegrey-50
-    dropdown_background_color_active:   "#CFD8DC"                               # md-bluegrey-100
+    dropdown_background_color_hover:    "#ECEFF1"                               # md-orangegrey-50
+    dropdown_background_color_active:   "#CFD8DC"                               # md-orangegrey-100
 
   # ----------------------------------------------------------------------------
   # NavQuicklinks
