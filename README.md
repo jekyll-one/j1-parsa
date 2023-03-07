@@ -7,7 +7,7 @@ the best of OpenSource software for the Web and the Web site generator
 private or professional use. Explore this site to learn what's possible if
 you go to the Jekyll Way.
 
-![Screenshot](https://github.com/jekyll-one/j1-agency/raw/main/agency-screenshot.jpg "J1 Agency")
+![Screenshot](https://github.com/jekyll-one/j1-parsa/raw/main/parsa-screenshot.jpg "J1 Parsa")
 
 * Fully Responsive. J1 Theme supports modern web browsers on all
   devices for best results on PCs, Tablets, and SmartPhones.
