@@ -14,12 +14,12 @@
         </p>
 
         {% if site.social %}
-        <h5 class="notoc">Follow</h5>
+        <h3 class="notoc">Follow</h3>
         <ul class="list-inline d-inline-block mb-5">
           {% for social in site.social %}
           <li class="list-inline-item mx-1">
-            <a href="{{ social.link }}" class="text-dark link-no-decoration" target="blank" rel="noopener" alt="Social Media" aria-label="Social Media">
-              <i class="{{ social.icon }}"></i>
+            <a class="text-dark link-no-decoration" href="{{social.link}}" target="blank" rel="noopener" alt="Social Media" aria-label="Social Media">
+              <i class="{{social.icon}}"></i>
             </a>
           </li>
           {% endfor %}
