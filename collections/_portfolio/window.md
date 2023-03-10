@@ -1,12 +1,18 @@
 ---
-layout:                                 portfolio
+layout:                                 post
 
 title:                                  Window
+tagline:                                Photography
 category:                               Photography
 
-image:                                  /assets/images/parsa/portfolio/6.jpg
+image:
+  path:                                 /assets/images/parsa/portfolio/6.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Portfolio Image
 
 comments:                               false
+sidebar:                                false
 sitemap:                                false
 personalization:                        false
 exclude_from_search:                    true

@@ -1,6 +1,6 @@
 ---
-title:                                  Organize Your Life With 5 Simple Rules
-tagline:                                Modern life - Health
+title:                                  Organize Your Life With Simple Rules
+tagline:                                Modern Life · Health
 description: >
                                         Modern life refers to the way of life and the
                                         living conditions that have evolved with technological
@@ -55,6 +55,8 @@ excerpt__end
 
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
+== Modern Life · Health
+
 Modern life is characterized by the widespread use of technology and the
 internet, which have made communication, information sharing, and access to
 services more convenient and efficient. People can now work remotely, shop

@@ -3,9 +3,9 @@ title:                                  Contact Me
 tagline:                                I love to hear from you
 date:                                   2023-02-21 00:00:00
 description: >
-                                        I’m Jhon Abraham, a Freelance Art Director based
-                                        in France. Focusing across branding and identity,
-                                        digital and print.
+                                        I'm a Freelance Art Director based in France.
+                                        My work focuses on corporate identity, branding,
+                                        and digital publishing.
 
 categories:                             [ Contact ]
 tags:                                   [ Theme, Parsa ]

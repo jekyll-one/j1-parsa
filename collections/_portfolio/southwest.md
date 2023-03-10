@@ -2,11 +2,17 @@
 layout:                                 portfolio
 
 title:                                  Southwest
+tagline:                                Website Design
 category:                               Website Design
 
-image:                                  /assets/images/parsa/portfolio/5.jpg
+image:
+  path:                                 /assets/images/parsa/portfolio/5.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Portfolio Image
 
 comments:                               false
+sidebar:                                false
 sitemap:                                false
 personalization:                        false
 exclude_from_search:                    true

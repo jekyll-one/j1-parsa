@@ -2,6 +2,8 @@
 layout:                                 portfolio
 
 title:                                  Explore
+tagline:                                Graphic Design
+
 category:                               Graphic Design
 
 image:                                  /assets/images/parsa/portfolio/2.jpg

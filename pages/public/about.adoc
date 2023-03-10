@@ -3,9 +3,9 @@ title:                                  About Me
 tagline:                                Hello, I’m Jhon Abraham
 date:                                   2023-02-21 00:00:00
 description: >
-                                        I’m Jhon Abraham, a Freelance Art Director based
-                                        in France. Focusing across branding and identity,
-                                        digital and print.
+                                        I'm a Freelance Art Director based in France.
+                                        My work focuses on corporate identity, branding,
+                                        and digital publishing.
 
 categories:                             [ About ]
 tags:                                   [ Theme, Parsa ]

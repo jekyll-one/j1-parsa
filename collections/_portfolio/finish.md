@@ -2,11 +2,17 @@
 layout:                                 portfolio
 
 title:                                  Finish
+tagline:                                Identity
 category:                               Identity
 
-image:                                  /assets/images/parsa/portfolio/3.jpg
+image:
+  path:                                 /assets/images/parsa/portfolio/3.jpg
+  width:                                1920
+  height:                               1280
+  alt:                                  Portfolio Image
 
 comments:                               false
+sidebar:                                false
 sitemap:                                false
 personalization:                        false
 exclude_from_search:                    true

@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
-# ~/_data/layouts/post.yml
+# ~/_data/layouts/collection.yml
 # Configuration data to create the (HTML) Layout (data) of
-# all content pages of type POST
+# all content pages of type COLLECTION
 #
 # Product/Info:
 # https://jekyll.one
@@ -141,7 +141,7 @@ lanes:
   # ----------------------------------------------------------------------------
   #
   - lane:
-      enabled:                          true
+      enabled:                          false
       region:                           body-header
       type:                             sync
       base:                             _includes/custom/parsa
@@ -179,15 +179,14 @@ lanes:
   # ----------------------------------------------------------------------------
 
   # ----------------------------------------------------------------------------
-  # POST content
-  #
+  # COLLECTION content
   - lane:
       enabled:                          true
       region:                           body-main
       type:                             sync
       base:                             _includes/themes/j1
       path:                             layouts
-      file:                             content_generator_post.html
+      file:                             content_generator_collection.html
 
 # ------------------------------------------------------------------------------
 # END config

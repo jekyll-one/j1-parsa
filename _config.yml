@@ -47,7 +47,7 @@
 #   values:                             development|production
 #   default:                            development
 #
-environment:                            production
+environment:                            development
 
 # version
 # ------------------------------------------------------------------------------
@@ -229,27 +229,12 @@ doctype:                                html
 title:                                  Parsa | Jekyll Portfolio Template
 tagline:                                Welcome
 description: >
-                                        I’m a Freelance Art Director based in France.
-                                        Focusing across branding and identity, digital and print.
+                                        I'm a Freelance Art Director based in France.
+                                        My work focuses on corporate identity, branding,
+                                        and digital publishing.
 keywords: >
-                                        opensource, free, load, download, start, starter, example,
-                                        high, easy, use, secure, encrypt, standard, popular,
-                                        generate, create, learn, distribute, publish, deploy,
-                                        beginner, advanced, expert, student, learner, writer, reader, visitor
-                                        framework, toolkit, integration, extension, module, api,
-                                        dynamic, static, generator, client, server, internet, local, localhost
-                                        page, web, website, webdesign, material, design, responsive,
-                                        javascript, nodejs, ruby, windows, linux, osx, mac, os,
-                                        http, https, html, html5, css, scss, style,
-                                        browser, firefox, chrome, edge, opera, safari,
-                                        configuration, generator, navigation, menu, dropdown, fab, action, button
-                                        application, interface, provider, api, repository,
-                                        cookie, language, translation, gdpr, dsgvo, privacy,
-                                        asciidoc, aciidoctor, bootstrap, jekyll, liquid,
-                                        hyvor, disqus, git, github, netlify, heroku, apple, microsoft,
-                                        provider, service, internet, support,
-                                        google, analytics, advertising, search, console, silverlight, score,
-                                        j1, template, jekyllone, comment
+                                        Parsa, Bootstrap, Jekyll, JekyllOne,
+                                        Theme, Template
 
 author:
   name:                                 Juergen Adams
@@ -346,8 +331,8 @@ permalink:                              pretty
 # site.url will be set to the value of host, port.
 # NOTE: Required setting for the sitemap plugin, for example.
 #
-# url:                                  http://localhost:25000
-url:                                    https://parsa.jekyll.one
+url:                                    http://localhost:25000
+# url:                                  https://parsa.jekyll.one
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the
@@ -683,13 +668,16 @@ defaults:
       sitemap:                          false
 
   # ----------------------------------------------------------------------------
-  # Archive HTML files (exported by `jekyll-archives`) excluded from sitemap
+  # Archive HTML files (exported by `jekyll-archives`)
   #
   - scope:
       path:                             pages/public/archives
 
     values:
-      sitemap:                          false
+      toc:                              true
+      fab_menu_id:                      default
+      scrollbar:                        false
+      sitemap:                          false                                   # excluded from sitemap
 
   # ----------------------------------------------------------------------------
   # Paginator HTML files (exported by Paginator V1) excluded from sitemap
@@ -778,6 +766,7 @@ defaults:
         follow:                         true
 
       toc:                              true
+      sidebar:                          true
       fab_menu_id:                      open_toc
       scrollbar:                        false
       comments:                         false

@@ -1,16 +1,21 @@
-<!-- Portfolio -->
-<section id="portfolio" class="page-section pt-5">
+<!-- Portfolio Grid-->
+<section class="page-section pt-5">
   <div class="container mt-5">
 
     <!-- Title -->
-    <div class="text-center mb-5">
-    	<h2 class="text-uppercase mb-0">Portfolio</h2>
-    	<p class="h3 text-muted mb-0"><i>what i do</i></p>
-    	<div class="d-inline-block g-width-50 g-height-2 bg-primary mb-2"></div>
-    </div>
+    <section id="portfolio" >
+    	<div class="section">
+    		<div class="text-center">
+    			<h2>Portfolio</h2>
+    			<p class="h3 text-muted mb-0">
+            <i>what i do</i>
+          </p>
+    			<div class="d-inline-block g-width-50 g-height-2 bg-primary mb-2"></div>
+    		</div>
+    	</div>
+    </section>
     <!-- /Title -->
 
-    <!-- Portfolio Grid -->
     <div class="row">
       {% assign collections = site.portfolio | sort: 'name' %}
       {% for collection in collections %}
@@ -23,33 +28,27 @@
                 <i class="mdi mdi-plus mdi-10x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{collection.image.path}}" alt="{{collection.title}}" />
+            <img class="img-fluid" src="{{ collection.image }}" alt="..." />
           </a>
           <div class="portfolio-caption">
             <div class="portfolio-caption-heading">{{collection.title}}</div>
-            <!-- div class="portfolio-caption-subheading text-muted">{{collection.tagline}}</div -->
-            <div>
-              <a class="link-no-decoration pt-3" href="{{collection.url}}">Read · {{collection.tagline}}</a>
-            </div>
+            <div class="portfolio-caption-subheading text-muted">{{collection.category}}</div>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
-    <!-- /Portfolio Grid -->
-
   </div>
 </section>
-<!-- /Portfolio -->
 
-<!-- Portfolio Modals -->
+<!-- Portfolio Modals-->
 {% for collection in collections %}
 <div class="portfolio-modal modal fade" id="portfolioModal{{forloop.index}}" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="close-modal" data-bs-dismiss="modal">
-        <img src="{{/assets/images/parsa/icons/close-icon.svg | relative_url}}" alt="Close {{collection.title}}" />
+        <img src="{{'/assets/images/parsa/icons/close-icon.svg' | relative_url}}" alt="Close modal" />
       </div>
 
       <div class="container">
@@ -58,22 +57,28 @@
             <div class="modal-body">
               <!-- Project details-->
               <h2 class="text-uppercase">{{collection.title}}</h2>
-              <p class="item-intro text-muted">{{collection.tagline}}</p>
-              <img class="img-fluid d-block mx-auto" src="{{collection.image.path | relative_url}}" alt="Portfolio" />
-              <p>{{collection.purpose}}</p>
-              <!-- ul class="list-inline">
+              <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+              <img class="img-fluid d-block mx-auto" src="{{collection.image | relative_url}}" alt="Portfolio" />
+              <p>
+                Use this area to describe your project. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt
+                minus dignissimos deserunt repellat aperiam quasi sunt officia
+                expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis
+                facere nemo!
+              </p>
+              <ul class="list-inline">
                 <li>
                   <strong>Client:</strong>
-                  {{collection.client}}
+                  Threads
                 </li>
                 <li>
                   <strong>Category:</strong>
-                  {{collection.category[0]}}
+                  Illustration
                 </li>
-              </ul -->
+              </ul>
               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                 <i class="mdi mdi-close mdi-24px mx-2"></i>
-                Close {{collection.title}}
+                Close Project
               </button>
             </div>
           </div>
@@ -83,5 +88,4 @@
     </div>
   </div>
 </div>
-<!-- /Portfolio Modals -->
 {% endfor %}

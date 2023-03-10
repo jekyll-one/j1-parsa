@@ -34,51 +34,56 @@ layout:                                 default
 
 {% comment %} Main
 ================================================================================ {% endcomment %}
+<article>
+  <main id="main-content" class="r-text-300 js-toc-content">
 
-<!-- Post title -->
-<section class="section-lg bg-secondary mt-6 mb-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h3>{{page.title | escape}}</h3>
-        <h4>{{page.tagline}}</h4>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /Post title -->
+    <!-- Post title -->
+    <div class="section-lg bg-secondary mt-6 mb-5">
+    	<div class="pl-3 ml-5">
+  			<h2 class="notoc">{{page.title}}</h2>
+        <h3 class="notoc">{{page.tagline}}</h3>
+    	</div>
+    </div>
+    <!-- /Post title -->
 
-<!-- Post content -->
-<section>
-	<div class="container mb-5">
-		<div class="row">
-			<div class="col-lg-8">
-				<ul class="list-inline d-flex py-3">
-					<li class="list-inline-item">
-            <i class="mdi mdi-account md-grey-900 mr-1" style="margin-right: 8px;"></i>
-            {{site.author.name}} &nbsp;&middot;&nbsp;&nbsp;
-          </li>
-					<li class="list-inline-item">
-            <i class="mdi mdi-calendar-blank md-grey-900 mr-1"></i>
-            {{page.date | date: '%b %d, %Y'}} &nbsp;&middot;&nbsp;&nbsp;
-          </li>
-          <li class="list-inline-item">
-            <i class="mdi mdi-tag-text-outline md-grey-900 mr-1" style="margin-right: 8px;"></i>
-            {{page.categories[0]}}
-          </li>
-				</ul>
-				{% if page.image %}
-				<img src="{{page.image.path | relative_url}}" alt="{{page.title}}" class="w-100 img-fluid mb-5">
-				{% endif %}
-				<div id="main-content" class="content r-text-{{rtext_size}} js-toc-content">
-					{{content}}
-				</div>
-				{% if site.disqus-identifier %}
-				{% include custom/parsa/static/disqus-comments.html %}
-				{% endif %}
-			</div>
-			{% include custom/parsa/templates/sidebar.html %}
-		</div>
-	</div>
-</section>
-<!-- /Post content -->
+    <!-- Post content -->
+    <div class="container mb-5">
+  		<div class="row">
+        {% if page.sidebar %}
+  			<div class="col-lg-8">
+        {% else %}
+        <div class="col-lg-12">
+        {% endif %}
+  				<ul class="list-inline d-flex py-3">
+  					<li class="list-inline-item">
+              <i class="mdi mdi-account md-grey-900 mr-1" style="margin-right: 8px;"></i>
+              {{site.author.name}} &nbsp;&middot;&nbsp;&nbsp;
+            </li>
+  					<li class="list-inline-item">
+              <i class="mdi mdi-calendar-blank md-grey-900 mr-1"></i>
+              {{page.date | date: '%b %d, %Y'}} &nbsp;&middot;&nbsp;&nbsp;
+            </li>
+            <li class="list-inline-item">
+              <i class="mdi mdi-tag-text-outline md-grey-900 mr-1" style="margin-right: 8px;"></i>
+              {{page.categories[0]}}
+            </li>
+  				</ul>
+  				{% if page.image %}
+  				<img src="{{page.image.path | relative_url}}" alt="{{page.title}}" class="w-100 img-fluid mb-5">
+  				{% endif %}
+  				<div id="main-content" class="content r-text-{{rtext_size}} js-toc-content">
+  					{{content}}
+  				</div>
+  				{% if site.disqus-identifier %}
+  				{% include custom/parsa/static/disqus-comments.html %}
+  				{% endif %}
+  			</div>
+        {% if page.sidebar %}
+  			{% include custom/parsa/templates/sidebar.html %}
+        {% endif %}
+  		</div>
+    </div>
+    <!-- /Post content -->
+
+  </main>
+</article>
