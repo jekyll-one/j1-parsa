@@ -47,7 +47,7 @@
 #   values:                             development|production
 #   default:                            development
 #
-environment:                            development
+environment:                            production
 
 # version
 # ------------------------------------------------------------------------------
@@ -229,13 +229,11 @@ doctype:                                html
 title:                                  Parsa | Jekyll Portfolio Template
 tagline:                                Welcome
 description: >
-                                        I'm a Freelance Art Director based in France.
-                                        My work focuses on corporate identity, branding,
-                                        and digital publishing.
+                                        I’m a Freelance Art Director based in France.
+                                        Focusing across branding and identity, digital and print.
 keywords: >
                                         Parsa, Bootstrap, Jekyll, JekyllOne,
                                         Theme, Template
-
 author:
   name:                                 Juergen Adams
   email:                                juergen@jekyll.one
@@ -331,8 +329,8 @@ permalink:                              pretty
 # site.url will be set to the value of host, port.
 # NOTE: Required setting for the sitemap plugin, for example.
 #
-url:                                    http://localhost:25000
-# url:                                  https://parsa.jekyll.one
+# url:                                  http://localhost:25000
+url:                                    https://parsa.jekyll.one
 
 # The subpath of your site, e.g. /blog/. Used in conjunction with
 # site.url (see above) when you want a link to something with the
