@@ -35,10 +35,12 @@ regenerate:                             true
 
 {% comment %} Set config data
 -------------------------------------------------------------------------------- {% endcomment %}
+{% assign slick_defaults      = modules.defaults.slick.defaults %}
+{% assign slick_settings      = modules.slick.settings %}
 
 {% comment %} Set config options
 -------------------------------------------------------------------------------- {% endcomment %}
-
+{% assign slick_options       = slick_defaults | merge: slick_settings %}
 
 {% comment %} Set variables
 -------------------------------------------------------------------------------- {% endcomment %}
@@ -50,6 +52,8 @@ regenerate:                             true
 {% if environment == 'prod' or environment == 'production' %}
   {% assign production = true %}
 {% endif %}
+
+slick_options: {{ slick_options | debug }}
 
 /*
  # -----------------------------------------------------------------------------
@@ -154,8 +158,8 @@ j1.adapter.slick = (function (j1, window) {
             ]
           });
 
-          $('.masonry-container').masonry({
-            itemSelector: '.masonry-container > div',
+          $('.slick-container').slick({
+            itemSelector: '.slick-container > div',
             columnWidth: 1
           });
 
