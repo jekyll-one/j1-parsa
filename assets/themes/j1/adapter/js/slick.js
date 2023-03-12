@@ -40,11 +40,9 @@ regenerate:                             true
 
 {% comment %} Set config options
 -------------------------------------------------------------------------------- {% endcomment %}
-{% assign slick_options       = slick_defaults | merge: slick_settings %}
 
 {% comment %} Set variables
 -------------------------------------------------------------------------------- {% endcomment %}
-
 
 {% comment %} Detect prod mode
 -------------------------------------------------------------------------------- {% endcomment %}
@@ -52,8 +50,6 @@ regenerate:                             true
 {% if environment == 'prod' or environment == 'production' %}
   {% assign production = true %}
 {% endif %}
-
-slick_options: {{ slick_options | debug }}
 
 /*
  # -----------------------------------------------------------------------------
@@ -84,6 +80,11 @@ j1.adapter.slick = (function (j1, window) {
   var _this;
   var logger;
   var logText;
+  var slickDefaults;
+  var slickSettings;
+  var slickOptions;
+  var sliderOptions;
+  var sliderSettings;
 
   // ---------------------------------------------------------------------------
   // Helper functions
@@ -102,21 +103,21 @@ j1.adapter.slick = (function (j1, window) {
       // -----------------------------------------------------------------------
       // Default module settings
       // -----------------------------------------------------------------------
-      var settings = $.extend({
+      var settings  = $.extend({
         module_name: 'j1.adapter.cookieConsent',
         generated:   '{{site.time}}'
       }, options);
 
+      // Load  module DEFAULTS|CONFIG
+      slickDefaults = $.extend({}, {{slick_defaults | replace: 'nil', 'null' | replace: '=>', ':' }});
+      slickSettings = $.extend({}, {{slick_settings | replace: 'nil', 'null' | replace: '=>', ':' }});
+      slickOptions  = $.extend(true, {}, slickDefaults, slickSettings);
+
       // -----------------------------------------------------------------------
       // Global variable settings
       // -----------------------------------------------------------------------
-      _this                 = j1.adapter.slick;
-      logger                = log4javascript.getLogger('j1.adapter.slick');
-
-
-      {% comment %} Load module config from yml data
-      -------------------------------------------------------------------------- {% endcomment %}
-
+      _this         = j1.adapter.slick;
+      logger        = log4javascript.getLogger('j1.adapter.slick');
 
       // -----------------------------------------------------------------------
       // initializer
@@ -130,38 +131,41 @@ j1.adapter.slick = (function (j1, window) {
           logger.debug('\n' + 'state: ' + _this.getState());
           logger.info('\n' + 'module is being initialized');
 
+          {% for slider in slick_settings.sliders %} {% if slider.enabled %}
+
+          sliderOptions  = $.extend({}, {{slider.options | replace: 'nil', 'null' | replace: '=>', ':' }});
+          sliderSettings = $.extend(true, {}, slickDefaults, sliderOptions );
+
           $('.featured-post-slider').slick({
-            dots: false,
-            speed: 300,
-            autoplay: true,
-            arrows: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            responsive: [{
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 3
-                }
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 2
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1
-                }
-              }
+            dots:                       sliderSettings.dots,
+            speed:                      sliderSettings.speed,
+            autoplay:                   sliderSettings.autoplay,
+            arrows:                     sliderSettings.arrows,
+            slidesToShow:               sliderSettings.slidesToShow,
+            slidesToScroll:             sliderSettings.slidesToScroll,
+            responsive: [
+                                        {
+                                          breakpoint: 1024,
+                                          settings: {
+                                            slidesToShow: 3
+                                          }
+                                        },
+                                        {
+                                          breakpoint: 600,
+                                          settings: {
+                                            slidesToShow: 2
+                                          }
+                                        },
+                                        {
+                                          breakpoint: 480,
+                                          settings: {
+                                            slidesToShow: 1
+                                          }
+                                        }
             ]
           });
 
-          $('.slick-container').slick({
-            itemSelector: '.slick-container > div',
-            columnWidth: 1
-          });
+          {% endif %} {% endfor %} // ENDFOR (all) sliders
 
           _this.setState('finished');
           logger.debug('\n' + 'state: ' + _this.getState());

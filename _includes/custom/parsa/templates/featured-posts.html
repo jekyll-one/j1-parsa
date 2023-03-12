@@ -20,7 +20,7 @@
     <!-- Posts -->
     <div class="row featured-post-slider pb-5">
       {% for post in site.posts %}
-      {% if post.featured == true %}
+      {% if post.group == 'featured' %}
       <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
         <article class="card bg-dark text-center text-white border-0 rounded-0">
           <img class="card-img rounded-0 img-fluid w-100" src="{{post.image.path | relative_url}}" alt="{{post.title}}">

@@ -15,10 +15,7 @@ image:
   height:                               1280
   alt:                                  Post Image
 
-toc:                                    true
-fab_menu_id:                            open_toc
-scrollbar:                              false
-featured:                               true
+group:                                  featured                                # goup used to e.g. collect slider data
 regenerate:                             false
 ---
 
