@@ -76,7 +76,9 @@ regenerate:                             true
 // -----------------------------------------------------------------------------
 'use strict';
 j1.adapter.slick = (function (j1, window) {
-  var environment  = '{{environment}}';
+  var environment               = '{{environment}}';
+  var responsiveSettings        = [];
+  var sliderResponsiveSettings  = '[' + '\n';
   var _this;
   var logger;
   var logText;
@@ -136,33 +138,79 @@ j1.adapter.slick = (function (j1, window) {
           sliderOptions  = $.extend({}, {{slider.options | replace: 'nil', 'null' | replace: '=>', ':' }});
           sliderSettings = $.extend(true, {}, slickDefaults, sliderOptions );
 
+          {% if slider.options.responsive %}
+          // collect breakpoint settings
+          responsiveSettings = $.extend({}, {{slider.responsive | replace: 'nil', 'null' | replace: '=>', ':' }});
+          // generate breakpoint elements
+          for (const [obj_key, obj_value] of Object.entries(responsiveSettings)) {
+            var length = Object.keys(obj_value.settings).length;
+            var count = 0;
+            for (const [key, value] of Object.entries(obj_value.settings)) {
+              count++;
+              if (key == 'breakOn' && count == 1) {
+                sliderResponsiveSettings += '  {' + '\n';
+                sliderResponsiveSettings += '    breakpoint: ' + value + ',' + '\n';
+                sliderResponsiveSettings += '    settings: {' + '\n';
+              } else {
+                sliderResponsiveSettings += '      ' + key + ': ' + value + ',' + '\n';
+              }
+              // close current breakpoint element
+              if (count == length) {
+                sliderResponsiveSettings += '    }' + '\n';
+                sliderResponsiveSettings += '  },' + '\n';
+              }
+            }
+          } // End generate breakpoint elements
+
+          // close all breakpoint elements
+          sliderResponsiveSettings += ']' + '\n';
+          logger.debug('\n' + 'responsive settings: ' + '\n' + sliderResponsiveSettings);
+          {% endif %}
+
           $('.featured-post-slider').slick({
-            dots:                       sliderSettings.dots,
-            speed:                      sliderSettings.speed,
-            autoplay:                   sliderSettings.autoplay,
+            accessibility:              sliderSettings.accessibility,
+            adaptiveHeight:             sliderSettings.adaptiveHeight,
             arrows:                     sliderSettings.arrows,
-            slidesToShow:               sliderSettings.slidesToShow,
+            autoplay:                   sliderSettings.autoplay,
+            autoplaySpeed:              sliderSettings.autoplaySpeed,
+            centerMode:                 sliderSettings.centerMode,
+            centerPadding:              sliderSettings.centerPadding,
+            cssEase:                    sliderSettings.cssEase,
+            dots:                       sliderSettings.dots,
+            dotsClass:                  sliderSettings.dotsClass,
+            draggable:                  sliderSettings.draggable,
+            easing:                     sliderSettings.easing,
+            edgeFriction:               sliderSettings.edgeFriction,
+            fade:                       sliderSettings.fade,
+            focusOnSelect:              sliderSettings.focusOnSelect,
+            focusOnChange:              sliderSettings.focusOnChange,
+            infinite:                   sliderSettings.infinite,
+            initialSlide:               sliderSettings.initialSlide,
+            lazyLoad:                   sliderSettings.lazyLoad,
+            mobileFirst:                sliderSettings.mobileFirst,
+            pauseOnDotsHover:           sliderSettings.pauseOnDotsHover,
+            pauseOnFocus:               sliderSettings.pauseOnFocus,
+            pauseOnHover:               sliderSettings.pauseOnHover,
+            respondTo:                  sliderSettings.respondTo,
+            rows:                       sliderSettings.rows,
+            rtl:                        sliderSettings.rtl,
+            slide:                      sliderSettings.slide,
+            slidesPerRow:               sliderSettings.slidesPerRow,
             slidesToScroll:             sliderSettings.slidesToScroll,
-            responsive: [
-                                        {
-                                          breakpoint: 1024,
-                                          settings: {
-                                            slidesToShow: 3
-                                          }
-                                        },
-                                        {
-                                          breakpoint: 600,
-                                          settings: {
-                                            slidesToShow: 2
-                                          }
-                                        },
-                                        {
-                                          breakpoint: 480,
-                                          settings: {
-                                            slidesToShow: 1
-                                          }
-                                        }
-            ]
+            slidesToShow:               sliderSettings.slidesToShow,
+            speed:                      sliderSettings.speed,
+            swipe:                      sliderSettings.swipe,
+            swipeToSlide:               sliderSettings.swipeToSlide,
+            touchMove:                  sliderSettings.touchMove,
+            touchThreshold:             sliderSettings.touchThreshold,
+            useCSS:                     sliderSettings.useCSS,
+            useTransform:               sliderSettings.useTransform,
+            variableWidth:              sliderSettings.variableWidth,
+            vertical:                   sliderSettings.vertical,
+            verticalSwiping:            sliderSettings.verticalSwiping,
+            waitForAnimate:             sliderSettings.waitForAnimate,
+            zIndex:                     sliderSettings.zIndex,
+            responsive:                 sliderResponsiveSettings
           });
 
           {% endif %} {% endfor %} // ENDFOR (all) sliders

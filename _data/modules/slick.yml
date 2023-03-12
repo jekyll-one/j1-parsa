@@ -32,23 +32,23 @@ settings:
   sliders:
 
     # --------------------------------------------------------------------------
-    # FEATURED posts
+    # ARTICLE slider (featured posts)
     #
     - slider:
       enabled:                        true
 
       id:                             featured_post_slider
       type:                           post
-      group:                          featured                                  # generate data only for group (specified in article/post)
+      group:                          featured                                  # generate slides only for group (specified in article/post)
 
-      # ----------------------------------------------------------------------
+      # ------------------------------------------------------------------------
       # Lightbox options
       #
       lightbox:
         enabled:                      false
         type:                         lb
 
-      # ----------------------------------------------------------------------
+      # ------------------------------------------------------------------------
       # Slider options
       #
       options:
@@ -59,6 +59,76 @@ settings:
         slidesToShow:                 3
         slidesToScroll:               1
         responsive:                   true
+
+      # ------------------------------------------------------------------------
+      # Reponsive options
+      #
+      responsive:
+        - breakpoint:
+          settings:
+            breakOn:                  1024
+            slidesToShow:             3
+            slidesToScroll:           3
+        - breakpoint:
+          settings:
+            breakOn:                  600
+            slidesToShow:             2
+            slidesToScroll:           2
+            dots:                     true
+        - breakpoint:
+          settings:
+            breakOn:                  480
+            slidesToShow:             1
+            slidesToScroll:           1
+
+
+    # --------------------------------------------------------------------------
+    # EXAMPLE slider 1
+    #
+    - slider:
+      enabled:                        false
+
+      id:                             example_slider_1
+      type:                           image
+
+      # ------------------------------------------------------------------------
+      # Lightbox options
+      #
+      lightbox:
+        enabled:                      false
+        type:                         lb
+
+      # ------------------------------------------------------------------------
+      # Slider options
+      #
+      options:
+        dots:                         false
+        speed:                        300
+        autoplay:                     true
+        arrows:                       false
+        slidesToShow:                 3
+        slidesToScroll:               1
+        responsive:                   true
+
+      # ------------------------------------------------------------------------
+      # Reponsive options
+      #
+      responsive:
+        - breakpoint:
+          settings:
+            breakOn:                  1024
+            slidesToShow:             3
+            slidesToScroll:           3
+        - breakpoint:
+          settings:
+            breakOn:                  600
+            slidesToShow:             2
+            slidesToScroll:           2
+        - breakpoint:
+          settings:
+            breakOn:                  480
+            slidesToShow:             1
+            slidesToScroll:           1
 
       # ------------------------------------------------------------------------
       # Slides

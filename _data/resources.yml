@@ -1958,7 +1958,6 @@ resources:
         js:                             [ modules/particles/js/particles ]
         init_function:                  [ j1.adapter.particles.init ]
 
-
   # ----------------------------------------------------------------------------
   # Slick
   # Ultimate Slider library
@@ -1979,7 +1978,7 @@ resources:
       dependencies:                     false
       pass_init_data:                   false
       data:
-        css:                            [ modules/slick/css/slick ]
+        css:                            [ modules/slick/css/slick, modules/slick/css/theme/uno  ]
         files:                          [ adapter/js/slick.js ]
         js:                             [ modules/slick/js/slick ]
         init_function:                  [ j1.adapter.slick.init ]

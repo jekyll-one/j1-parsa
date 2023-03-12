@@ -52,7 +52,6 @@ A well-designed product can improve user experience and contribute to user
 satisfaction. In today's digital world, a responsive design is essential
 to attract and retain users.
 
-
 == My Passion
 
 My work refers to the design of the visual elements of a user interface,
