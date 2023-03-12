@@ -1,6 +1,6 @@
 ---
-title:                                  Preview
-tagline:                                Explore Current Theme
+title:                                  Explore Current Theme
+tagline:                                Preview
 date:                                   2023-03-04 00:00:00
 description: >
                                         Parsa is based on a popular HTML theme offered by ThemeFisher.

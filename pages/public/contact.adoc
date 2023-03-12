@@ -11,10 +11,10 @@ categories:                             [ Contact ]
 tags:                                   [ Theme, Parsa ]
 
 image:
-  path:                                 /assets/images/parsa/featured-post/post-1.jpg
-  width:                                1920
-  height:                               1280
-  alt:                                  Post Image
+  path:                                 /assets/images/parsa/masthead/banner-img.png
+  width:                                410
+  height:                               580
+  alt:                                  Banner Image
 
 fab_menu_id:                            default
 scrollbar:                              false
