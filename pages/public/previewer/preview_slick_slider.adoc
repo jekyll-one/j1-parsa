@@ -3,9 +3,9 @@ title:                                  Slick Slider
 tagline:                                Preview
 date:                                   2023-03-02 00:00:00
 description: >
-                                        The last carousel you'll ever need. Slick is a responsive carousel
-                                        jQuery plugin that supports multiple breakpoints, CSS3 transitions,
-                                        touch events/swiping & much more.
+                                        Slick is a responsive carousel jQuery plugin that
+                                        supports multiple breakpoints, CSS3 transitions,
+                                        touch events/swiping and much more.
 
 categories:                             [ Previewer ]
 tags:                                   [ Slick, Slider ]
@@ -49,42 +49,58 @@ resources:                              [ clipboard, rouge, slick ]
 // Include sub-documents (if any)
 // -----------------------------------------------------------------------------
 [role="dropcap"]
-The last carousel you'll ever need. Slick is a responsive carousel
-jQuery plugin that supports multiple breakpoints, CSS3 transitions,
-touch events/swiping & much more!
+The last carousel you'll ever need.
 
-== Responsive Display
+Slick is a responsive carousel jQuery plugin that supports multiple
+breakpoints, CSS3 transitions, touch events/swiping and much more.
+
+[role="mb-4"]
+Find by the following examples what Slick can do.
+
+== Posts Slider
+
+lorem:sentences[3]
+
+slick::featured_post_slider[]
+
+[role="mb-4"]
+lorem:sentences[3]
+
+
+== Responsive Slider
 
 lorem:sentences[5]
 
-++++
-<div class="slider responsive mt-4 mb-5">
-  <div>
-    <h3 class="slide-item">1</h3>
-  </div>
-  <div>
-    <h3 class="slide-item">2</h3>
-  </div>
-  <div>
-    <h3 class="slide-item">3</h3>
-  </div>
-  <div>
-    <h3 class="slide-item">4</h3>
-  </div>
-  <div>
-    <h3 class="slide-item">5</h3>
-  </div>
-  <div>
-    <h3 class="slide-item">6</h3>
-  </div>
-  <div>
-    <h3 class="slide-item">7</h3>
-  </div>
-  <div>
-    <h3 class="slide-item">8</h3>
-  </div>
-</div>
-++++
+slick::reponsive_slider[]
+
+// ++++
+// <div class="slider responsive mt-4 mb-5">
+//   <div>
+//     <h3 class="slide-item">1</h3>
+//   </div>
+//   <div>
+//     <h3 class="slide-item">2</h3>
+//   </div>
+//   <div>
+//     <h3 class="slide-item">3</h3>
+//   </div>
+//   <div>
+//     <h3 class="slide-item">4</h3>
+//   </div>
+//   <div>
+//     <h3 class="slide-item">5</h3>
+//   </div>
+//   <div>
+//     <h3 class="slide-item">6</h3>
+//   </div>
+//   <div>
+//     <h3 class="slide-item">7</h3>
+//   </div>
+//   <div>
+//     <h3 class="slide-item">8</h3>
+//   </div>
+// </div>
+// ++++
 
 lorem:sentences[3]
 
@@ -101,51 +117,51 @@ lorem:sentences[3]
 * Add, remove, filter & unfilter slides
 * Autoplay, dots, arrows, callbacks, and more
 
-++++
-<script>
-$(function() {
-  var slick_arrows = true;
-
-  if (slick_arrows) {
-    $('.responsive').addClass('slick-arrows');
-  }
-
-  $('.responsive').slick({
-    arrows:                             slick_arrows,
-    dots:                               true,
-    infinite:                           false,
-    speed:                              300,
-    slidesToShow:                       4,
-    slidesToScroll:                     4,
-    responsive: [
-      {
-        breakpoint:                     1024,
-        settings: {
-          arrows:                       false,
-          slidesToShow:                 3,
-          slidesToScroll:               3
-        }
-      },
-      {
-        breakpoint:                     600,
-        settings: {
-          dots:                         false,
-          arrows:                       false,
-          slidesToShow:                 2,
-          slidesToScroll:               2
-        }
-      },
-      {
-        breakpoint:                     480,
-        settings: {
-          dots:                         false,
-          arrows:                       false,
-          slidesToShow:                 1,
-          slidesToScroll:               1
-        }
-      }
-    ]
-  });
-});
-</script>
-++++
+// ++++
+// <script>
+// $(function() {
+//   var slick_arrows = true;
+//
+//   if (slick_arrows) {
+//     $('.responsive').addClass('slick-arrows');
+//   }
+//
+//   $('.responsive').slick({
+//     arrows:                             slick_arrows,
+//     dots:                               true,
+//     infinite:                           false,
+//     speed:                              300,
+//     slidesToShow:                       4,
+//     slidesToScroll:                     4,
+//     responsive: [
+//       {
+//         breakpoint:                     1024,
+//         settings: {
+//           arrows:                       false,
+//           slidesToShow:                 3,
+//           slidesToScroll:               3
+//         }
+//       },
+//       {
+//         breakpoint:                     600,
+//         settings: {
+//           dots:                         false,
+//           arrows:                       false,
+//           slidesToShow:                 2,
+//           slidesToScroll:               2
+//         }
+//       },
+//       {
+//         breakpoint:                     480,
+//         settings: {
+//           dots:                         false,
+//           arrows:                       false,
+//           slidesToShow:                 1,
+//           slidesToScroll:               1
+//         }
+//       }
+//     ]
+//   });
+// });
+// </script>
+// ++++

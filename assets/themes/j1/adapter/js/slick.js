@@ -78,7 +78,7 @@ regenerate:                             true
 j1.adapter.slick = (function (j1, window) {
   var environment               = '{{environment}}';
   var responsiveSettings        = [];
-  var sliderResponsiveSettings  = '[' + '\n';
+//var sliderResponsiveSettings  = '[' + '\n';
   var _this;
   var logger;
   var logText;
@@ -87,6 +87,7 @@ j1.adapter.slick = (function (j1, window) {
   var slickOptions;
   var sliderOptions;
   var sliderSettings;
+  var sliderResponsiveSettings;
 
   // ---------------------------------------------------------------------------
   // Helper functions
@@ -121,17 +122,22 @@ j1.adapter.slick = (function (j1, window) {
       _this         = j1.adapter.slick;
       logger        = log4javascript.getLogger('j1.adapter.slick');
 
+      _this.setState('started');
+      logger.debug('\n' + 'state: ' + _this.getState());
+      logger.info('\n' + 'module is being initialized');
+
+      // load HTML portion for sliders configured
+      console.debug('loading HTML portion for all sliders configured');
+      _this.loadSliderHTML(slickOptions, slickOptions.sliders);
+
       // -----------------------------------------------------------------------
       // initializer
       // -----------------------------------------------------------------------
       var dependencies_met_page_ready = setInterval (function (options) {
         var pageState   = $('#no_flicker').css("display");
         var pageVisible = (pageState == 'block') ? true: false;
-        if ( j1.getState() === 'finished' && pageVisible ) {
 
-          _this.setState('started');
-          logger.debug('\n' + 'state: ' + _this.getState());
-          logger.info('\n' + 'module is being initialized');
+        if ( j1.getState() === 'finished' && pageVisible ) {
 
           {% for slider in slick_settings.sliders %} {% if slider.enabled %}
 
@@ -141,6 +147,8 @@ j1.adapter.slick = (function (j1, window) {
           {% if slider.options.responsive %}
           // collect breakpoint settings
           responsiveSettings = $.extend({}, {{slider.responsive | replace: 'nil', 'null' | replace: '=>', ':' }});
+          // initialize resposi settings
+          sliderResponsiveSettings  = '[' + '\n';
           // generate breakpoint elements
           for (const [obj_key, obj_value] of Object.entries(responsiveSettings)) {
             var length = Object.keys(obj_value.settings).length;
@@ -167,7 +175,8 @@ j1.adapter.slick = (function (j1, window) {
           logger.debug('\n' + 'responsive settings: ' + '\n' + sliderResponsiveSettings);
           {% endif %}
 
-          $('.featured-post-slider').slick({
+          // initialize the slider
+          $('.{{slider.selector}}').slick({
             accessibility:              sliderSettings.accessibility,
             adaptiveHeight:             sliderSettings.adaptiveHeight,
             arrows:                     sliderSettings.arrows,
@@ -225,6 +234,42 @@ j1.adapter.slick = (function (j1, window) {
       }, 25);
 
     }, // END init
+
+    // -------------------------------------------------------------------------
+    // loadSliderHTML()
+    // load all master sliders (HTML portion) dynanically configured
+    // and enabled (AJAX) from data file
+    // NOTE: Make sure the placeholder is available in the content page
+    // eg. using the asciidoc extension masterslider::
+    // -------------------------------------------------------------------------
+    loadSliderHTML: function (options, slider) {
+      var numSliders      = Object.keys(slider).length;
+      var active_sliders  = numSliders;
+      var xhr_data_path   = options.xhr_data_path + '/index.html';
+      var xhr_container_id;
+
+      // console.debug('load HTML portion of all sliders configured found in page');
+      console.debug('number of sliders found: ' + numSliders);
+
+      _this.setState('load_data');
+      Object.keys(slider).forEach(function(key) {
+        if (slider[key].enabled) {
+          console.debug('load HTML data on slider id: ' + slider[key].id);
+
+          xhr_container_id = slider[key].id;
+          j1.loadHTML({
+            xhr_container_id: xhr_container_id,
+            xhr_data_path:    xhr_data_path,
+            xhr_data_element: slider[key].id
+          });
+        } else {
+          console.debug('slider found disabled on id: ' + slider[key].id);
+          active_sliders--;
+        }
+      });
+      console.debug('sliders loaded in page active|deactive: ' + active_sliders + '|' + numSliders);
+      _this.setState('data_loaded');
+    }, // END loadSliderHTML
 
     // -------------------------------------------------------------------------
     // messageHandler: MessageHandler for J1 CookieConsent module

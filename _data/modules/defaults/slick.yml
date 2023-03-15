@@ -477,7 +477,7 @@ defaults:
   # AJAX methods are used to supply the needed HTML code at
   # the time the carousel is initialized (by the Initializer)
   #
-  xhr_data_path:                        /assets/data/slick.html
+  xhr_data_path:                        /assets/data/slick/index.html
 
 # ------------------------------------------------------------------------------
 # END config

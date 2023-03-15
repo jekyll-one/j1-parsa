@@ -91,14 +91,13 @@ module_version:               {{module_version | debug}}
   {% if slider.enabled %}
 
     {% comment %} Collect slides
-    ------------------------------------------------------------------------------ {% endcomment %}
-
+    ---------------------------------------------------------------------------- {% endcomment %}
     {% if slider.type == 'post' %}
       <!-- Posts -->
-      <div id="{{slider.id}}" class="row featured-post-slider pb-5">
+      <div id="{{slider.id}}" class="row {{slider.selector}}">
         {% for post in site.posts %}
-        <!-- Collect data only if group matches -->
         {% if post.group contains slider.group %}
+        <!-- Collect data only if group matches -->
         <div class="col-lg-3 col-sm-6 mb-2 mb-lg-0 px-1">
           <article class="card bg-dark text-center text-white border-0 rounded-0">
             <img class="card-img rounded-0 img-fluid w-100" src="{{post.image.path | relative_url}}" alt="{{post.title}}">
@@ -133,6 +132,37 @@ module_version:               {{module_version | debug}}
         {% endfor %}
       </div>
     <!-- /Posts -->
+    {% endif %}
+
+    {% if slider.type == 'default' %}
+    <!-- Default -->
+    <div id="{{slider.id}}" class="{{slider.selector}} slider responsive mt-4 mb-5">
+      <div>
+        <h3 class="slide-item">1</h3>
+      </div>
+      <div>
+        <h3 class="slide-item">2</h3>
+      </div>
+      <div>
+        <h3 class="slide-item">3</h3>
+      </div>
+      <div>
+        <h3 class="slide-item">4</h3>
+      </div>
+      <div>
+        <h3 class="slide-item">5</h3>
+      </div>
+      <div>
+        <h3 class="slide-item">6</h3>
+      </div>
+      <div>
+        <h3 class="slide-item">7</h3>
+      </div>
+      <div>
+        <h3 class="slide-item">8</h3>
+      </div>
+    </div>
+    <!-- /Default -->
     {% endif %}
 
     <!-- [INFO   ] [~/assets/data/slick.html               ]  [end slider {{slider.id}}] -->

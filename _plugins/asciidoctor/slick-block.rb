@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
-# ~/_plugins/asciidoctor-extensions/masterslider-block.rb
-# Asciidoctor extension for J1 Masterslider
+# ~/_plugins/asciidoctor-extensions/slick-block.rb
+# Asciidoctor extension for J1 Slick (Carousel)
 #
 # Product/Info:
 # https://jekyll.one
@@ -15,34 +15,34 @@ require 'asciidoctor/extensions' unless RUBY_ENGINE == 'opal'
 include Asciidoctor
 
 # ------------------------------------------------------------------------------
-# A block macro that embeds a (Master) Slider (parent) block
-# into the output document.
+# A block macro that embeds a (Slick) Slider (parent) block
+# into the output document
 #
 # Usage:
 #
-#   masterslider::slider_id[role="additional classes"]
+#   slick::slider_id[role="additional classes"]
 #
 # Example:
 #
 #   .The slider title
-#   masterslider::ms_00001[role="mt-3 mb-5"]
+#   slick::ms_00001[role="mt-3 mb-5"]
 # ------------------------------------------------------------------------------
 Asciidoctor::Extensions.register do
 
-  class MasterSliderBlockMacro < Extensions::BlockMacroProcessor
+  class SlickBlockMacro < Extensions::BlockMacroProcessor
     use_dsl
 
-    named :masterslider
+    named :slick
     name_positional_attributes 'role'
 
     def process parent, target, attrs
 
       title_html  = (attrs.has_key? 'title') ? %(<div class="slider-title">#{attrs['title']}</div>\n) : nil
-      html = %(#{title_html} <div id="p_#{target}" class="master-slider-parent #{attrs['role']}"></div>)
+      html = %(#{title_html} <div id="#{target}" class="slider-parent #{attrs['role']}"></div>)
       create_pass_block parent, html, attrs, subs: nil
     end
   end
 
-  block_macro MasterSliderBlockMacro
+  block_macro SlickBlockMacro
 
 end
