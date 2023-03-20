@@ -422,7 +422,7 @@ defaults:
   adaptiveHeight:                       false
   # appendArrows:                       $(element)                              # currently NOT supported
   # appendDots:                         $(element)                              # currently NOT supported
-  arrows:                               true
+  arrows:                               false
   # asNavFor:                           $(element)                              # currently NOT supported
   autoplay:                             false
   autoplaySpeed:                        3000
@@ -477,7 +477,7 @@ defaults:
   # AJAX methods are used to supply the needed HTML code at
   # the time the carousel is initialized (by the Initializer)
   #
-  xhr_data_path:                        /assets/data/slick/index.html
+  xhr_data_path:                        /assets/data/slick
 
 # ------------------------------------------------------------------------------
 # END config

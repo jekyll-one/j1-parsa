@@ -44,20 +44,24 @@ resources:                              [ clipboard, rouge, slick ]
 
 // Page content
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// https://github.com/EdwardBalaj/Simple-DeepL-API-Integration
+
+// Include sub-documents (if any)
+// -----------------------------------------------------------------------------
 [role="dropcap"]
+The last carousel you'll ever need.
+
 Slick is a responsive carousel jQuery plugin that supports multiple
 breakpoints, CSS3 transitions, touch events/swiping and much more.
 
 [role="mb-4"]
-Find by the following examples what Slick sliders can do.
+Find by the following examples what Slick can do.
 
-// Include sub-documents (if any)
-// -----------------------------------------------------------------------------
 == Posts Slider
 
-lorem:sentences[5]
+lorem:sentences[3]
 
-slick::featured_post_slider[role="mt-4 mb-5"]
+slick::featured_post_slider[]
 
 [role="mb-4"]
 lorem:sentences[3]
@@ -67,20 +71,19 @@ lorem:sentences[3]
 
 lorem:sentences[5]
 
-slick::reponsive_slider[role="mt-4 mb-5"]
+slick::reponsive_slider[]
 
 lorem:sentences[3]
 
 [role="mt-5"]
 == Features
 
-* Fully responsive
-* Separate slider option settings per breakpoint
-* Uses CSS3 if available for a broswer, fully functional if not
-* Swipe enabled. Or disabled, if prefered
+* Fully responsive. Scales with its container
+* Separate settings per breakpoint
+* Uses CSS3 when available. Fully functional when not
+* Swipe enabled. Or disabled, if you prefer
 * Desktop mouse dragging
 * Infinite looping
 * Fully accessible with arrow key navigation
-* Add, remove, filter and unfilter slides
-* Autoplay, dots, arrows
-* Rich set of callbacks to enable individual behaviour of your sliders
+* Add, remove, filter & unfilter slides
+* Autoplay, dots, arrows, callbacks, and more

@@ -31,7 +31,7 @@ image:
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-[role="dropcap"]
+[role="dropcap mb-4"]
 Corporate identity is the visual and verbal representation of a company's
 brand. It includes all of the visual and messaging elements used to present
 a consistent and recognizable image of the company to its target audience.

@@ -14,31 +14,23 @@
 */
 @charset 'UTF-8';
 
-/* Example slider
+/* Slider
 -------------------------------------------------------------------------------- */
-h2.slide-item, h3.slide-item {
-    background: var(--bs-gray-300);
-    color: var(--bs-gray-800);
-    font-size: 36px;
-    line-height: 150px;
-    margin: 1%;
-    text-align: center;
+.slick-slider {
+  margin: 1.5rem auto 1.5rem auto;
 }
 
-/* All slider
--------------------------------------------------------------------------------- */
-.slick-loading .slick-list {
+.slick-slider.slick-arrows {
+  margin: 1.5rem 3rem 1.5rem 3rem;
+}
+
+.slider-parent {
+    overflow: hidden;
+}
+
+/* .slick-loading .slick-list {
 	background: #fff url('../../images/ajax-loader.gif') center center no-repeat;
-}
-
-/* Arrows
--------------------------------------------------------------------------------- */
-.slick-arrow {
-    position: absolute;                                                         /* position of the arrow */
-    margin-left: 20px;
-    margin-right: 20px;
-    z-index: 10;                                                                /* show on top of a slide */
-}
+} */
 
 /* Dots
 -------------------------------------------------------------------------------- */
@@ -113,20 +105,33 @@ h2.slide-item, h3.slide-item {
 	color: black;
 }
 
-/* Media breakpoints, all screens
+/* Media breakpoints
 -------------------------------------------------------------------------------- */
+
+/* Arrows
+-------------------------------------------------------------------------------- */
+
+/* All Media screens
+-------------------- */
 @media all {
   .slick-prev,
   .slick-next {
-    display: block;                                                             /* shown by default */
-    top: 50%;                                                                   /* center button in slide */
-  	font-size: 0;                                                               /* disable button text */
-  	border: none;                                                               /* disable button decoration */
-  	outline: none;                                                              /* disable button decoration */
-  	background: transparent;                                                    /* disable button background */
-    -webkit-transform: translate(0, -50%);                                      /* move upwards by 50% */
+  	font-size: 0;
+  	line-height: 0;
+  	position: absolute;
+  	top: 50%;
+  	display: block;
+  	width: 20px;
+  	height: 20px;
+  	padding: 0;
+  	-webkit-transform: translate(0, -50%);
   	-ms-transform: translate(0, -50%);
   	transform: translate(0, -50%);
+  	cursor: pointer;
+  	color: transparent;
+  	border: none;
+  	outline: none;
+  	background: transparent;
   }
 
   .slick-prev:hover,
@@ -156,13 +161,18 @@ h2.slide-item, h3.slide-item {
   	font-size: 40px;
   	line-height: 1;
   	opacity: .75;
-  	color: var(--bs-primary);
+  	color: #757575;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
   }
 
   .slick-prev {
-  	left: 0px;
+  	left: -40px;
+  }
+
+  [dir='rtl'] .slick-prev {
+  	right: -40px;
+  	left: auto;
   }
 
   .slick-prev:before {
@@ -174,7 +184,12 @@ h2.slide-item, h3.slide-item {
   }
 
   .slick-next {
-  	right: 0px;
+  	right: -20px;
+  }
+
+  [dir='rtl'] .slick-next {
+  	right: auto;
+  	left: -20px;
   }
 
   .slick-next:before {
@@ -184,11 +199,15 @@ h2.slide-item, h3.slide-item {
   [dir='rtl'] .slick-next:before {
   	content: '←';
   }
+
 }
 
-/* Media breakpoints, tablet|mobile
--------------------------------------------------------------------------------- */
+/* Tablet | Mobiles
+------------------- */
 @media screen and (max-width: 992px) {
+  .slick-slider.slick-arrows {
+    margin: 1.5rem auto 1.5rem auto;
+  }
   .slick-prev {
   	display: none !important;
   }

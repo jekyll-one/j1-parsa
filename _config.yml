@@ -439,6 +439,8 @@ sass:
 # ------------------------------------------------------------------------------
 #
 webrick:
+  DoNotReverseLookup:                   true                                    # speed up WEBrick
+  RequestTimeout:                       2
   headers:
     X-Builder-Template:                 J1 Parsa
     X-Builder-Engine:                   Jekyll

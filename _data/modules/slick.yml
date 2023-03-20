@@ -32,34 +32,24 @@ settings:
   sliders:
 
     # --------------------------------------------------------------------------
-    # ARTICLE slider (featured posts)
+    # POST slider
     #
     - slider:
-      enabled:                        true
+      enabled:                          true
 
-      id:                             featured_post_slider
-      selector:                       featured-post-slider                      # class used for slick to initialize on
-      type:                           post
-      group:                          featured                                  # generate slides only for group (specified in article/post)
-
-      # ------------------------------------------------------------------------
-      # Lightbox options
-      #
-      lightbox:
-        enabled:                      false
-        type:                         lb
+      id:                               post_slider
+      selector:                         post-slider                             # class used for slick to initialize on
+      type:                             post
+      group:                            Life                                    # generate slides only for group (specified in article/post)
 
       # ------------------------------------------------------------------------
       # Slider options
       #
       options:
-        autoplay:                     true
-        arrows:                       false
-        dots:                         false
-        speed:                        300
-        slidesToShow:                 3
-        slidesToScroll:               1
-        responsive:                   true                                      # enables reponsive options to generate breakpoint properties for slick()
+        autoplay:                       true
+        slidesToShow:                   3
+        slidesToScroll:                 1
+        responsive:                     true                                    # enables reponsive options to generate breakpoint properties for slick()
 
       # ------------------------------------------------------------------------
       # Reponsive options
@@ -67,51 +57,42 @@ settings:
       responsive:
         - breakpoint:
           settings:
-            breakOn:                  1024
-            slidesToShow:             3
-            slidesToScroll:           3
+            breakOn:                    1024
+            slidesToShow:               2
+            slidesToScroll:             2
         - breakpoint:
           settings:
-            breakOn:                  600
-            slidesToShow:             2
-            slidesToScroll:           2
-            dots:                     true
+            breakOn:                    600
+            slidesToShow:               1
+            slidesToScroll:             1
+            dots:                       true
         - breakpoint:
           settings:
-            breakOn:                  480
-            slidesToShow:             1
-            slidesToScroll:           1
+            breakOn:                    480
+            slidesToShow:               1
+            slidesToScroll:             1
 
 
     # --------------------------------------------------------------------------
-    # RESPONSIVE slider
+    # EXAMPLE slider 1
     #
     - slider:
-      enabled:                        true
+      enabled:                          true
 
-      id:                             reponsive_slider
-      selector:                       reponsive-slider
-      type:                           default
-
-      # ------------------------------------------------------------------------
-      # Lightbox options
-      #
-      lightbox:
-        enabled:                      false
-        type:                         lb
+      id:                               example_slider_arrows_dots
+      selector:                         example-slider-arrows-dots
+      type:                             example
 
       # ------------------------------------------------------------------------
       # Slider options
       #
       options:
-#       accessibility:                false
-        arrows:                       true
-        dots:                         true
-        speed:                        300
-        autoplay:                     false
-        slidesToShow:                 3
-        slidesToScroll:               1
-        responsive:                   true
+        arrows:                         true
+        dots:                           true
+        autoplay:                       false
+        slidesToShow:                   3
+        slidesToScroll:                 1
+        responsive:                     true
 
       # ------------------------------------------------------------------------
       # Reponsive options
@@ -119,19 +100,70 @@ settings:
       responsive:
         - breakpoint:
           settings:
-            breakOn:                  1024
-            slidesToShow:             3
-            slidesToScroll:           3
+            breakOn:                    1024
+            arrows:                     true
+            dots:                       true
+            slidesToShow:               2
+            slidesToScroll:             2
         - breakpoint:
           settings:
-            breakOn:                  600
-            slidesToShow:             2
-            slidesToScroll:           2
+            breakOn:                    600
+            slidesToShow:               1
+            slidesToScroll:             1
         - breakpoint:
           settings:
-            breakOn:                  480
-            slidesToShow:             1
-            slidesToScroll:           1
+            breakOn:                    480
+            slidesToShow:               1
+            slidesToScroll:             1
+
+    # --------------------------------------------------------------------------
+    # DEFAULT slider
+    #
+    - slider:
+      enabled:                          false
+
+      id:                               default_slider
+      selector:                         default-slider
+      type:                             default
+
+      # ------------------------------------------------------------------------
+      # Lightbox options
+      #
+      lightbox:
+        enabled:                        false
+        type:                           lb
+
+      # ------------------------------------------------------------------------
+      # Slider options
+      #
+      options:
+        arrows:                         true
+        dots:                           true
+        speed:                          300
+        autoplay:                       false
+        slidesToShow:                   3
+        slidesToScroll:                 1
+        responsive:                     true
+
+      # ------------------------------------------------------------------------
+      # Reponsive options
+      #
+      responsive:
+        - breakpoint:
+          settings:
+            breakOn:                    1024
+            slidesToShow:               2
+            slidesToScroll:             2
+        - breakpoint:
+          settings:
+            breakOn:                    600
+            slidesToShow:               1
+            slidesToScroll:             1
+        - breakpoint:
+          settings:
+            breakOn:                    480
+            slidesToShow:               1
+            slidesToScroll:             1
 
       # ------------------------------------------------------------------------
       # Slides

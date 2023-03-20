@@ -31,7 +31,7 @@ image:
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-[role="dropcap"]
+[role="dropcap mb-4"]
 Web design refers to the process of creating and designing the visual layout
 and functionality of websites. Web designers use technical and creative
 skills to create visually appealing, user-friendly, and effective websites

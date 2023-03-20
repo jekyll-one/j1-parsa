@@ -31,7 +31,7 @@ image:
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-[role="dropcap"]
+[role="dropcap mb-4"]
 Branding is a marketing practice that involves creating a name, design, symbol,
 or other identifying features that help differentiate a company's products or
 services from its competitors. Branding aims to establish a unique and

@@ -6,7 +6,6 @@ layout:                                 default
 -------------------------------------------------------------------------------- {% endcomment %}
 {% assign exclude_from_search = true %}
 
-
 <!-- Page title -->
 <section class="section-lg bg-secondary mt-6 mb-5">
   <div class="container">
@@ -26,6 +25,7 @@ layout:                                 default
     <div class="row">
 
       <div class="col-lg-8">
+        <!-- set id for masonry module -->
         <div id="category" class="row masonry-container pt-5">
           {% for post in page.posts %}
           <div class="col-sm-6 mb-5">
@@ -46,7 +46,7 @@ layout:                                 default
               <a class="d-block mb-3 text-dark text-uppercase link-no-decoration" href="{{site.jekyll-archives.category_archive_path | relative_url }}{{category | slugify}}" style="font-size: 24px;">{{category}}</a>
               {% endfor %}
               <h4 class="title-border">
-                <a class="text-dark link-no-decoration" href="{{post.url | relative_url}}">{{post.title}}</a>
+                <a class="text-dark link-no-decoration" href="{{post.url | relative_url}}">{{post.tags[0]}}</a>
               </h4>
               <p>{{post.excerpt | strip_html | truncatewords: 35}}</p>
               <a href="{{post.url | relative_url}}" class="btn btn-outline mb-4">read &nbsp;&nbsp;&middot;&nbsp;{{post.tagline}}</a>

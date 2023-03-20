@@ -439,6 +439,8 @@ sass:
 # ------------------------------------------------------------------------------
 #
 webrick:
+  DoNotReverseLookup:                   true                                    # speed up WEBrick
+  RequestTimeout:                       2
   headers:
     X-Builder-Template:                 J1 Parsa
     X-Builder-Engine:                   Jekyll
@@ -674,10 +676,11 @@ defaults:
       path:                             pages/public/archives
 
     values:
-      toc:                              true
+      toc:                              false
       fab_menu_id:                      default
       scrollbar:                        false
       sitemap:                          false                                   # excluded from sitemap
+      resources:                        [ masonry ]
 
 
   # ----------------------------------------------------------------------------

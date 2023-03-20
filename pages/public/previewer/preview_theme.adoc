@@ -1,6 +1,6 @@
 ---
-title:                                  Explore Current Theme
-tagline:                                Preview
+title:                                  Theme
+tagline:                                Explore Parsa
 date:                                   2023-03-04 00:00:00
 description: >
                                         Parsa is based on a popular HTML theme offered by ThemeFisher.
@@ -2965,7 +2965,7 @@ endif::[]
   var user_state        = j1.readCookie(cookie_names.user_state);
   var theme_slogans     = {};
 
-  theme_slogans.Parsa  = 'An awesome personal blog';
+  theme_slogans.Parsa  = 'an awesome personal blog';
 
   themeName             = user_state.theme_name;
   theme_slogan          = theme_slogans[themeName];

@@ -31,7 +31,7 @@ image:
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-[role="dropcap"]
+[role="dropcap mb-4"]
 Illustration  is the art of creating visual representations of concepts,
 ideas, and information through images, drawings, and other visual media. An
 illustration is often used in various contexts, including books, magazines,

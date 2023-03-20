@@ -29,7 +29,7 @@ image:
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-[role="dropcap"]
+[role="dropcap mb-4"]
 Photography plays an important role in web design as it can communicate a
 message or tell a story in a way that words and other visuals cannot.
 

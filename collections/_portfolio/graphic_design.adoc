@@ -31,7 +31,7 @@ image:
 
 // Place an excerpt at the most top position
 // -----------------------------------------------------------------------------
-[role="dropcap"]
+[role="dropcap mb-4"]
 Graphic design is the art and practice of creating visual content using a
 combination of typography, images, and other graphical elements. It is a
 discipline that involves the use of creative and technical skills to
